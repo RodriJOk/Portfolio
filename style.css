@@ -278,16 +278,12 @@ img{
   }
 
 .text-cursor{
-    color: white;
-    margin-left: 150px;
-    right: 0px;
-    bottom: 0;
-    width: 50%;
-    height: 150px;
+    margin: 1rem;
     text-align: center;
-    font-size:20px;
-    vertical-align: middle;
-    
+    color: #fff;
+    height: auto;
+    line-height: 1.6rem;
+    font-size: 1rem;
 }
 /*===== ABOUT =====*/
 
@@ -433,6 +429,7 @@ img{
 .contacto__rodrigo{
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -440,11 +437,10 @@ img{
     background-color: #2a4c6c;
     color: honeydew;
     border-radius: 25px;
-    height: 60px;
-    width: 20%;
+    height: 1.7rem;
+    width: 45%;
     border: none;
     text-align: center;
-    padding-top: 17px;
     display: flex;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
@@ -596,10 +592,42 @@ img{
     .contact__form{
         width: 300px;
     }
+    .contacto__rodrigo{
+        display: flex;
+        justify-content: space-around;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .contacto__rodrigo a{
+        background-color: #2a4c6c;
+        color: honeydew;
+        border-radius: 25px;
+        height: 60px;
+        width: 20%;
+        border: none;
+        text-align: center;
+        padding-top: 17px;
+        display: flex;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+    }
 
     .footer__container{
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
+    }
+
+    .text-cursor{
+        color: white;
+        margin-left: 150px;
+        right: 0px;
+        bottom: 0;
+        width: 50%;
+        height: 150px;
+        text-align: center;
+        font-size:20px;
+        vertical-align: middle; 
     }
 }
 
