@@ -123,20 +123,21 @@ const init = () => {
   typer
     .clearNow()
     .wait(1200)
-    .type("Me llamo Rodrigo. ")
+    .type("Me llamo Rodrigo 🧑🏻. ")
     .wait(500)
-    .type("Soy un apasionado por la tecnologia,")
-    .type(" y un desarrolador web Full Stack. ")
+    .type("Un apasionado por la tecnologia, ")
+    .type(" Javascript, ")
+    .type(" y un Desarrolador Web Front-End 💻.")
     
     .wait(300)
-    .type('(O eso intento :D)')
+    .type('(O eso intento 😅)')
     .wait(600)
-    .remove('(O eso intento :D)'.length)
+    .remove('(O eso intento 😅)'.length)
     .wait(900)
     .type(' Espero que disfrutes mi website, el cual fue hecho con mucho ')
     
     .wait(500)
-    .type("♥")
+    .type("❤")
     /*.wait(4000)
     .clear();*/
 }
