@@ -172,9 +172,13 @@ img{
 .nav__link:hover{
     color: var(--first-color)
 }
+
 .nav__logo{
     color: var(--white-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
+
 .nav__toggle{
     color: var(--white-color);
     font-size: 1.5rem;
