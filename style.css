@@ -434,7 +434,7 @@ img{
 }
 
 .contacto__rodrigo a{
-    background-color: #2a4c6c;
+    background-color: var(--first-color);
     color: honeydew;
     border-radius: 25px;
     height: 1.7rem;
@@ -454,7 +454,7 @@ img{
 /*===== FOOTER =====*/
 
 .footer{
-    background-color: var(--dark-color);
+    background-color: var(--first-color);
 }
 .footer__container{
     row-gap: 2rem;
@@ -599,7 +599,7 @@ img{
     }
     
     .contacto__rodrigo a{
-        background-color: #2a4c6c;
+        background-color: var(--first-color);
         color: honeydew;
         border-radius: 25px;
         height: 60px;
