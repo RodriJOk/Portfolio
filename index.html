@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- ===== BOX ICONS ===== -->
+     
+    <!-- ===== BOX ICONS ===== -->
      <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+     
+    <!-- ===== FONTS ===== -->
      <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="./estilos/style.css">
     
     <title>Portfolio</title>
    
@@ -16,19 +19,32 @@
 
 <body>
     <!--===== HEADER =====-->
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">Rodrigo Juarez</a>
+    <header class="header">
+        <nav class="header-nav bd-grid">
+            <div class="header-nav__logo">
+                <a href="#" class="logo">Rodrigo Juarez</a>
             </div>
 
-            <div class="nav__menu" id="nav-menu">
+            <div class="header-nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">Sobre mi</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Sobre mi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contacto</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#blog" class="nav__link">Blog</a>
+                    </li>
                 </ul>
             </div>
 
@@ -172,12 +188,71 @@
         </section>
 
         <!--===== CONTACT =====-->
+        
         <section class="contacto__rodrigo section" id="contact">
             <a href="https://www.linkedin.com/in/rodrijuarez/" target="_blank">Contactame  <p class="contacto__parrafo"><i class="far fa-address-book"></i></p> </a>
             <a href="./PDF/Rodrigo Juarez CV.pdf" download="Rodrigo Juarez">Descarga mi cv <p class="contacto__parrafo"><i class="fas fa-arrow-circle-down"></i></p></a>  
             
         </section>
+
+        <!--===== BLOG =====-->
+
+        <section id="blog">
+            <h2 class="section-title">Blog</h2>
+            <div class="portfolio__container bd-grid">
+                <div class="portfolio__img">
+                    <img src="./imagenes/NPM.png" alt="npm">
+
+                    <div class="portfolio__link">
+                        <a href="npm.html" class="portfolio__link-name">Ver mas</a>
+                    </div>
+                </div>
+                <!-- <div class="portfolio__img">
+                    <img src="./imagenes/ARQUIAR.png" alt="">
+
+                    <div class="portfolio__link">
+                        <a href="https://arquiar.netlify.app/" class="portfolio__link-name">Ver mas</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="./imagenes/RODRICUP.png" alt="">
+
+                    <div class="portfolio__link">
+                        <a href="https://rodri-cup.netlify.app/" class="portfolio__link-name">Ver mas</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="./imagenes/RODRITECH.png" alt="">
+
+                    <div class="portfolio__link">
+                        <a href="https://rodri-tech.netlify.app/" class="portfolio__link-name">Ver mas</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="./imagenes/RODRIBOOK.png" alt="">
+
+                    <div class="portfolio__link">
+                        <a href="https://rodrijok.github.io/RodriBook/" class="portfolio__link-name">Ver mas</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="./imagenes/RODRI-WORLD.png" alt="RodriWorld">
+
+                    <div class="portfolio__link">
+                        <a href="https://rodri-paises.netlify.app/" class="portfolio__link-name">Ver mas</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="./imagenes/RodriVideoPlay.png" alt="RodriVideo">
+
+                    <div class="portfolio__link">
+                        <a href="https://rodrivideo.netlify.app/" class="portfolio__link-name">Ver mas</a>
+                    </div>
+                </div> -->
+            </div>
+        </section>
     </main>
+
 
     <!--===== FOOTER =====-->
     <footer class="footer section">
