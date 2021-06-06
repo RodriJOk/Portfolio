@@ -83,10 +83,103 @@
         
     </section>
 
-   <!--  <section>
-        <h1>NPM</h1>
-        <p>Alguna vez te has preguntado que es NPM. </p>
+   <section class="npm">
+    <aside>
+        <div class="contenedor-temario" id="temario">
+            <h3 class="titulo">Temario</h3>
+            <ul class="lista">
+                <li class="activo"><a href="#uno">Introduccion a Npm</a></li>
+                <li><a href="#dos">¿Que es NPM?</a></li>
+                <li><a href="#tres">Instalacion de Node</a></li>
+                <li><a href="#cuatro">Inicia un proyecto con NPM</a></li>
+            </ul>
+        </div>
+    </aside>
+    <main>
+        <div class="card" id="uno">
+            <main class="introduccion">
+                <h2 class="introduccion-title">Introduccion a Npm - Guia basica</h2>    
+                <p class="introduccion-description">En este ultimo tiempo, hemos visto como <a href="https://nodejs.dev/">Node</a> a tomado mucha popularidad en el mundo del desarrollo en el lenguaje Javascript. Lo interesante es que no podemos hablar de Node.Js y pasar por alto NPM. Es por eso que en este articulo hablaremos de el a profundidad. Espero que te sea de mucha utilidad. 😊</p>
+            </main>     
+        </div> 
+        <div class="card" id="dos">
+            <main class="content">
+                <h3 class="content-subtitle">NPM - ¿Que es?</h3>
+             <p class="content-paragraph"> 
+                NPM es un <strong>gestor de paquetes</strong> 📦, el mas popular que tiene Javascript, donde encontaras una gran cantidad de recursos para poder implentar en tus proyectos. 
+                Tambien vas a poder crear tus propios paquetes y compartilos con toda la comunidad.
+                En <a href="https://www.npmjs.com">su sitio</a> podras ver a detalle mas informacion sobre los paquetes que podras implementar en tus proyectos. Desde librerias open source hasta grandes proyectos.
+                NPM (por sus siglas en ingles <strong>N</strong><i>ode</i> <strong>P</strong><i>ackage</i> <strong>M</strong><i>ananger</i>) se encarga de administar todos los paquetes y, algo importante que debemos tener en cuenta, es que para trabajar con NPM, debemos tener instalada la version de Node.</p>
+                <p>Pero, ¿Como hacemos eso?. Tranquilo/a 😉. Es muy simple, aqui veras una guia de pasos para llevar a cabo.</p>
+            </main>
+        </div>       
+        <div class="card" id="tres">
+            <main class="content">
+             <h3>En Windows, sigue estos pasos:</h3>
+ 
+                 <p><strong>1_ Descarga e instalacion de Node:</strong> Para poder empezar a trabajar con NPM, necesuitamos tener instalado Node.js en nuestro computador. Para ello vamos a su <a href="https://nodejs.dev/">sitio oficial</a> y descargamos Node.</p>
+                 <img src="./imagenes/NPM/Install Node Windows.png" alt="Node"> 
+                 <p>Una vez descargado Node, pasaremos a la etapa de instalacion. (El famoso Next -> Next 😅). Una vez terminada la instalacion, podemos chequear si tenemos Node en nuestras computadoras si habriamos la consola (Simbolo del sistema) y podemos ejecutar el comando <i>node -v.</i> Si como resultado, vemos el numero de la version de Node.js, lo habras instalado correctamente 🙌🏻.</p>
+                 <img src="./imagenes/NPM/node -v.png" alt="Node">
+                 <p>Tambien podemos comprobar que tenemos instalado NPM, si ejecutamos el comando <i>npm -v</i> y podemos ver la version del mismo</p>
+                 <img src="./imagenes/NPM/npm -v.png"> 
+                 <p>Si queremos asegurarnos de que tenemos la ultima versiom podemos ejecutar el comando <i>npm install -g npm@lastest</i></p>
+            </main>
+        </div>
+        <div class="card" id="cuatro">
+            <main class="content">
+             <h3>Inicia un proyecto con npm</h3>
+             <p>Es de mucha importancia de que cuando vayas a crear un proyecto, lo inicialices con npm. Esto nos va a permitir generar una cierta configuracion con ciertos datos importantes para nuestro entorno, asi como tambien compartirlo con otros desarrolladores y puedan tener una nocion de lo que esta ocurriendo, para eso nos vamos a mover a nuestra terminal, en donde vamos a inicilaizar nuestro primer proyecto con NPM. Como muestra de ejemplo, voy a crear una carpeta con el nombre NPMjs y voy a posicionarme dentro de el con el comando <i>cd "nombrearchivo"</i>. </p>
+             <img src="./imagenes/NPM/Create folder.png">
+             <p>Una vez creada nuesta carpeta del proyecto, ahora si estamos listos para poder inicializar nuestro proyecto con NPM. Pero ¿como? ¡Es muy sencillo! Solo debemos ejecutar el comando <i>npm init.</i> Al ejecutar este comando, nos va a permitira nosotros, crear el archivo <strong>package.json</strong>, con el cual vamos a tener una configuracion establecida, una descripcion del proyecto y cierto valores que necesita.</p>
+             <p>Al ejecutar el comando tambien nos aparecera una pequeña introduccion, con algunas explicaciones. Y tambein nos permitira ir completando la informacion con los valores que desemos (con algunas sugerencias).</p>
+             <img src="./imagenes/NPM/npm init.png" alt="NPM init">
+             <p>Los valores que vamos a tener que configurar son los siguientes</p>
+             <ol >
+                <li>
+                    <p><strong>Nombre del paquete (package.name):</strong> Aqui debemos colocar el nombre de nuestro proyecto</p>
+                </li>
+                <li>
+                    <p><strong>Version:</strong> Numero de version de nuestro proyecto. La sugerencia es la version inicial (1.0.0)</p>
+                </li>
+                <li>
+                    <p><strong>Descripcion (Description):</strong> En este campo podemos colocar una breve descripcion de nuestro proyecto</p>
+                </li>
+                <li>
+                    <p><strong>Punto de entrada (entry point):</strong> Este paso es importante, por que aqui vamos a definir nuestro punto de entrada de nuestro proyecto.</p>
+                </li>
+                <li>
+                    <p><strong>Test command:</strong> Aqui nosotros podremos configurar comandos de utilidad para nuestro proyecto.</p>
+                </li>
+                <li>
+                    <p><strong>Repositorio de Git (git):</strong> Aqui podemos establecer el nombre de nuestro repositorio de Git</p>
+                </li>
+                <li>
+                    <p><strong>Palabras claves (keywords):</strong> Aqui podremos establecer palabras claves que tengan relacion o describan a nuestro proyecto.</p>
+                </li>
+                <li>
+                    <p><strong>Autor (Author):</strong> Aqui podremos establecer quien es la persona que esta construyecndo este proyecto inicialmente.</p>
+                </li>
+                <li>
+                    <p><strong>Licencia (license):</strong> Aqui podremos configurar la licencia que tendra nuestro proyecto. En este aspecto podremos elegir entre MIT o ISC.</p>
+                </li>
+             </ol>
+             <p>Luego de establecer los valores, tendremos un resumen con todas las configuraciones que hemos establecido. Si luego de darle un vistazo esta todo correcto, podemos terminar la configuracion de nuestro proyecto.</p>
+             <img src="./imagenes/NPM/config finish.png">
+             <p>Luego de terminado todos estos pasos, vamos a poder ver en nuestro proyecto un archivo llamado <strong>package.json</strong></p>
+            </main>
+        </div>
+    </main>    
     </section>
- -->
+
+    <script type="text/javascript">
+        document.querySelectorAll("#temario .lista a").forEach((elemento)=>{
+  elemento.addEventListener("click", ()=>{
+      console.log("Estas dentro")
+      document.querySelector("#temario .activo").classList.remove("activo")
+      elemento.parentElement.classList.add("activo")
+  })
+})
+    </script>
 </body>
 </html>

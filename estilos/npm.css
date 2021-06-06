@@ -1,0 +1,160 @@
+:root {
+	--fondo: #f2f2f2;
+	--color-temario: #c9c9c9;
+	--temario-active: #ffbd86;
+	--temario-active-border: #ff7300;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f2f2f2;
+}
+
+.npm{
+    color: #000;
+    margin: 0px auto;
+    max-width: 1200px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 20% auto;
+    font-family: "Popins", sans-serif;
+    gap: 20px;
+}
+
+aside{
+    padding: 0px 15px;
+}
+
+aside .title{
+    margin-bottom: 10px;
+}
+
+.contenedor-temario{
+    padding-top: 20px;
+    /* margin-top: 20px; */
+    position: sticky;
+    top: 100px;
+}
+
+aside .lista{
+    list-style: none;
+    border-left: 2px solid var(--color-temario);
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+aside .lista li{
+    position: relative;
+
+}
+
+aside .lista li a{
+    display: block;
+    color: #5a5a5a;
+    padding: 15px 10px;
+    text-decoration: none;
+    transition: .3s ease all;
+}
+
+aside .lista li.activo a,
+aside .lista li a:hover{
+    color: black;
+}
+
+
+aside .lista li::before{
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: var(--fondo);
+    position: absolute;
+    border: 2px solid var(--color-temario);
+    top: calc(50% - 6px);
+    left: -19px;
+    transform: rotate(45deg);
+    transition: .3s ease all;
+}
+
+aside .lista li.activo::before{
+    background-color: var(--temario-active);
+    border: 2px solid var(--temario-active-border);
+}
+
+aside .lista li:hover::before{
+    border: 2px solid var(--temario-active-border);
+}
+
+/* main{
+    min-height: 2000px;
+}  */
+
+/* .card{
+    margin: 20px 0;
+    padding: 40px;
+    background: #fff;
+} */
+
+.introduccion{
+    margin-bottom: 25px;
+}
+
+.introduccion-title{
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 5px solid #ccc;
+    margin-bottom: 40px;
+    font-family: "Popins", sans-serif;
+}
+
+.introduccion-description{
+    font-size: 20px;
+    text-align: left;
+    padding: 15px;
+}
+
+.content h3{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.content p{
+    text-align: left;
+    font-size: 20px;
+    padding: 0px 15px;
+    margin-top: 20px;
+}
+
+.content img{
+    margin-top: 20px;
+    padding: 0px 15px;
+}
+
+.content span{
+    background-color: #ccc;
+}
+
+.content ol{
+    margin: 0px 30px;
+}
+
+@media screen and (max-width: 700px) {
+    .contenedor{
+        grid-template-columns: 1fr;
+    }
+
+    aside{
+        margin-bottom: 40px;
+    }
+}
