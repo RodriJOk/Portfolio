@@ -94,6 +94,8 @@
                 <li><a href="#cuatro">Inicia un proyecto con NPM</a></li>
                 <li><a href="#quinto">Instalacion de dependencias</a></li>
                 <li><a href="#sexto">Instalacion de dependencias a nivel global</a></li>
+                <li><a href="#septimo">Instalacion de dependencias a nivel global</a></li>
+                <li><a href="#octavo">Actualizar y eliminar paquetes</a></li>
             </ul>
         </div>
     </aside>
@@ -199,8 +201,39 @@
                 <p>En algun momento te vas a topar con un paquete que debe ejecutarse y funcionar de forma "global". ¿Pero que significa esto? Cuando nosotros trabajamos con un proyecto, podemos instalar el paquete de <i>moment</i>, y moment puede ser utilizado dentro del contexto de mi proyecto. Pero no esta disponible en otros proyectos. Uno de los principales paquetes que utilizamos de forma global se llama nodemon. Nodemon nos permite generar que este a la "escucha" algun cambio o valor, y va a mentener nuestro proceso a algun comando que estemos ejecutando con Node. Entonces este paquete es requerido de forma global y de esta forma, nosotros debemos de instalarlo con un flag, y en este caso vamos a hacer el ejercicio, y en nuesta terminal vamos a instalar un paquete global. Un detalle importante a tener en cuenta es que cuando instalamos de forma global un paquete, lo debemos hacer con <strong>los permisos de administrador</strong> correspondientes. Esto lo instalamos con el comando <strong>npm install -g nodemon</strong>.
                 </p>
                 <img src="./imagenes/NPM/npm install -g nodemon .png">
-                <p>Si queremos ver si tenemos el paquete dentro de la lista de recursos que estan instalados de forma global en npm, podemos ejecutar el comando <strong>npm list -g --depth 0</strong></p>
+                <p>Si queremos ver si tenemos el paquete dentro de la lista de recursos que estan instalados de forma global en npm, podemos ejecutar el comando <strong>npm list -g --depth 0</strong>.</p>
                 <img src="./imagenes/NPM/npm list -g --depth 0.png" alt="">
+            </main>
+        </div>
+        <div class="card" id="septimo">
+            <main class="content">
+                <h3>Instalacion de dependencias con force</h3>
+                <p>Continuando con la instalacion de dependencias en nuestro proyecto hay un flag que vamos a utilizar para distingir que esta dependencia no va a ser instalada dentro del proyecto, pero si queremos ver el output que nos retorna. El comando <strong>npm install nombreDelPaquete --dry-run</strong> <i>simula que instala una dependencia</i>, nos da el output de lo que esta sucediendo, que version instalaria y la cantidad de tiempo que demoraria en intalar los paquetes. Esto es muy util cuando estamos dudando entre si instalar o no.</p>
+                <img src="./imagenes/NPM/npm install react --dry-sun.png" alt="npm install --dry-sun">
+                <p>Tambien contamos con el flag <strong>--force</strong> el cual nos va a permitir a nosotros, instalar este paquete <i>forzando esa instalacion</i> a que sea desde el ultimo recurso desde el servidor de npm. Este flag tambien tiene un atajo: <strong>npm install nombreDelPaquete -f</strong>.</p>
+                <img src="./imagenes/NPM/npm install webpack -f.png">
+                </p>
+                <p>Imaginemos que ahora, queremos instalar una dependencia, pero en este caso, conozco y se que necesito una version especifica. En este caso, nos sera de ayuda ejecutar el comando <strong> npm install nombreDelPaquete@version</strong>.</p>      
+                <img src="./imagenes/NPM/json-server version.png" alt="Json-Server">
+            </main>
+        </div>
+        <div class="card" id="octavo">
+            <main class="content">
+                <h3>Actualizar y eliminar paquetes.</h3>
+                <p>Ahora vamos a revisar como podemos <strong>actualizar</strong> o darnos cuenta de que hay actualizaciones de estos paquetes. El comando que nos permite hacer esto es <strong>npm outdate</strong>. 
+                Al ejecutar este comando aparecera en forma de lista los paquetes que faltan actualizar.
+                </p>
+                <img src="./imagenes/NPM/npm outdate.png" alt="Npm outdate">
+                <p>Tambien hay otro comando que nos va a permitir listar los paquetes que tiene el proyecto <strong>npm list</strong>.</p>    
+                <img src="./imagenes/NPM/npm list.png" alt="NPM List">
+                <p>Si queremos actualizar todos los paquetes en los que estemos trabajando en nuestro proyecto, podemos ejecutar el comando <strong>npm update</strong>.</p>
+                <img src="./imagenes/NPM/npm update.png" alt="npm update">
+                <p>Si queremos actualizar solo un paquete, a la ultima version, podemos utilizar el comando <strong>npm install nombreDelPaquete@latest</strong>.</p>
+                <img src="./imagenes/NPM/npm install json-server@latest.png" alt="npm install json-server">
+                <p>Podemos eliminar un paquete de node_modules y del archivo package.json con el comando <strong>npm uninstall nombreDelPaquete</strong>.</p>
+                <img src="./imagenes/NPM/npm uninstall .png" alt="npm uninstall">
+                <p>Tambien disponemos del comando <strong>npm uninstall nombreDelPaquete --no-save</strong>. Este comando nos permite <i>desistalar un paquete</i> de node_modules, pero no de nuestro archivo de package</p>
+                <img src="./imagenes/NPM/npm uninstall --no-save.png" alt="npm uninstall --no-save">
             </main>
         </div>
     </main>    
