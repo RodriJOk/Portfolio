@@ -96,6 +96,7 @@
                 <li><a href="#sexto">Instalacion de dependencias a nivel global</a></li>
                 <li><a href="#septimo">Instalacion de dependencias a nivel global</a></li>
                 <li><a href="#octavo">Actualizar y eliminar paquetes</a></li>
+                <li><a href="#noveno">Uso de simbolos ^ (carrets) y ~ (virgurilla)</a></li>
             </ul>
         </div>
     </aside>
@@ -234,6 +235,19 @@
                 <img src="./imagenes/NPM/npm uninstall .png" alt="npm uninstall">
                 <p>Tambien disponemos del comando <strong>npm uninstall nombreDelPaquete --no-save</strong>. Este comando nos permite <i>desistalar un paquete</i> de node_modules, pero no de nuestro archivo de package</p>
                 <img src="./imagenes/NPM/npm uninstall --no-save.png" alt="npm uninstall --no-save">
+            </main>
+        </div>
+        <div class="card" id="noveno">
+            <main class="content">
+                <h3>Uso de simbolos ^ (carrets) y ~ (virgurilla)</h3>
+                <p>Antes de hablar sobre este punto en concreto, podemos hablar sobre la forma de manejar versionados</p>
+                <img src="./imagenes/NPM/versions.png" alt="Versions">
+                <p>Nosotros, normalemnte tenemos tres valores. El primero <strong>major</strong>: Siempre va a ser un cambio muy importante.
+                En segundo lugar, tambien vamos a tener cambios menores o <strong>minor</strong>: Estos son cambios que añaden ciertas funcionalidades, pero que no son un gran paso para decir que es una version nueva. Y en tercer lugar, nos encontramos con los <strong>patch</strong>: Aqui encontramos cambios muy menores como bug fixes o algunos parches. Miremos un package-lock de un proyecto</p>
+                <img src="./imagenes/NPM/package-lock.png" alt="package-lock">
+                <p>Como bien podemos ver en esta ultima imagen, puede que nos encontremos con un archivo package-lock, que contenga algunos simbolos (^) o (~). Es por eso que es importante saber lo que representan ellos. En primer lugar, si mantenemos el
+                ^ (carrets) dentro de la configuración de nuestro package estamos garantizando que cuando realicemos una actualización o tengamos un cambio que podamos realizar, vamos a hacer actualización de los cambios menores y de los parches o bug fixes. Para quedarnos en una sola versión, podemos eliminar el caret.
+                En segundo lugar, si mantenemos la ~ (virgurilla) establece que vamos a recibir actualizaciones o cambios solamente de los cambios que son parches o bug fixes.</p>
             </main>
         </div>
     </main>    
