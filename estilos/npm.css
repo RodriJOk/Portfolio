@@ -150,11 +150,12 @@ aside .lista li:hover::before{
 }
 
 @media screen and (max-width: 700px) {
-    .contenedor{
-        grid-template-columns: 1fr;
+    .npm{
+        grid-template-columns: 1fr; 
+        width: 90%;
     }
 
     aside{
-        margin-bottom: 40px;
+        display: none;
     }
 }
