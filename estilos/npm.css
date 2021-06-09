@@ -22,12 +22,12 @@ body {
 .npm{
     color: #000;
     margin: 0px auto;
-    max-width: 1200px;
-    width: 90%;
+    max-width: 1500px;
+    width: 95%;
     display: grid;
     grid-template-columns: 20% auto;
     font-family: "Popins", sans-serif;
-    gap: 20px;
+    gap: 12rem;
 }
 
 aside{

@@ -97,6 +97,7 @@
                 <li><a href="#septimo">Instalacion de dependencias a nivel global</a></li>
                 <li><a href="#octavo">Actualizar y eliminar paquetes</a></li>
                 <li><a href="#noveno">Uso de simbolos ^ (carrets) y ~ (virgurilla)</a></li>
+                <li><a href="#decimo">Seguridad</a></li>
             </ul>
         </div>
     </aside>
@@ -248,6 +249,16 @@
                 <p>Como bien podemos ver en esta ultima imagen, puede que nos encontremos con un archivo package-lock, que contenga algunos simbolos (^) o (~). Es por eso que es importante saber lo que representan ellos. En primer lugar, si mantenemos el
                 ^ (carrets) dentro de la configuración de nuestro package estamos garantizando que cuando realicemos una actualización o tengamos un cambio que podamos realizar, vamos a hacer actualización de los cambios menores y de los parches o bug fixes. Para quedarnos en una sola versión, podemos eliminar el caret.
                 En segundo lugar, si mantenemos la ~ (virgurilla) establece que vamos a recibir actualizaciones o cambios solamente de los cambios que son parches o bug fixes.</p>
+            </main>
+        </div>
+        <div class="card" id="decimo">
+            <main class="content">
+                <h3>Seguridad</h3>
+                <p>La importancia de la seguridad dentro de nuestro proyectos, es parte de nosotros como desarrolladores. Debemos esforzarnos por asegurarnos de no introducir ningun software malisioso. Cuando nosotros descargamos un proyecto de npm, debemos de saber que npm incluye una herramienta para que podamos saber que paquete se esta instalando, y si alguno de ellos debiera ser actualizado. Por ejemplo, si instalamos un paquete que puede llegar a tener vulnerabilidades de seguridad, nos los va a marcar. En ese caso podemos ejecutar el comando <strong>npm audit</strong>. Este comando nos va a permitir auditar o examinar nuestro proyecto, y ver si hay algun cambio que pueda afectar nuestro proyecto.  </p>
+                <img src="./imagenes/NPM/npm audit.png" alt="npm audit">
+                <p>Tambien podemos obteneer la informacion de nuestro proyecto auditado, en formato JSON, con el comando <strong>npm audit --json</strong>. Este comando nos genera un documento JSON, donde esta la informacion un poco mas detallada, de los que esta ocurriendo con nuestros paquetes. </p>
+                <img src="./imagenes/NPM/npm audit --json.png" alt="npm audit --json">
+                <p>Hay un comando disponible, que es el comando <strong>npm audit fix</strong>. Este comando nos permite solucionar los errores de vulnerabilidad y seguridad.</p>
             </main>
         </div>
     </main>    
