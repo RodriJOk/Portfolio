@@ -24,7 +24,7 @@
     --z-fixed:100;
 
     /* ===== Fuente y tipografia =====*/
-    --body-font: font-family: 'Poppins', sans-serif;
+    --body-font: 'Poppins', sans-serif;
         
         /* ===== Mobile =====*/
         --big-font-size: 5.25rem;
@@ -63,20 +63,18 @@ body{
 h1,h2,p{
     margin:0;
     font-weight: 100;
-    font-family: var(--body-font);
 }
 
 ul{
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: var(--body-font);
 }
 
 a{
     text-decoration: none;
-    color: var(--text-color);   
-    font-family: var(--body-font);
+    /* color: var(--text-color); */   
+    color: var(--white-color);
 }
 img{
     max-width: 100%;
@@ -114,7 +112,6 @@ img{
 
 .logo{
     color: var(--white-color);
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 
@@ -166,6 +163,7 @@ img{
     /*overflow: visible;*/
     height: 500px;
     width: 100%;
+    color: var(--white-color);
 }
 .home_container{
     height: calc(100vh - var(--header-height));
@@ -175,47 +173,44 @@ img{
 .home__title{
     align-self: flex-start;
     text-align: center;
-    font-size: 65px;
-    /*font-size: var(--big-font-size);*/
-    color: var(--white-color);
     line-height: 1.2;
     padding-bottom: 50px;
     padding-top: 50px;
-    font-weight: 100;
-    font-family: 'Poppins', sans-serif;
 }
 
 .home__title span{
+    font-weight: 100;
+    font-size: 85px;
     text-shadow: 0 20px 25px rgba(0,0, 0, .5);
-    
 }
 
 .home_mini_container{
     padding-top: 20px;
     display: flex;
-    /*justify-content: space-around;*/
     align-items: center;
-    font-family: 'Poppins', sans-serif;
-    }
+    width: 90%;
+}
 
 .home__scroll{
-    padding-bottom: var(--mb-4);
     width: 10%;
     padding-left: 5px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .home__scroll-link{
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
-    color:var(--white-color);
+}
+
+.home_mini_text{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
 }
 .text-cursor::after {
     content: '|';
-    color: white;
     opacity: 1;
     animation: blinkTextCursor 1s infinite;
-  }
+}
   
   .text-cursor.typing::after {
     animation: none;
@@ -239,9 +234,8 @@ img{
 .text-cursor{
     margin: 1rem;
     text-align: center;
-    color: #fff;
     height: auto;
-    line-height: 1.6rem;
+    line-height: 2.2rem;
     font-size: 1rem;
 }
 /*===== ABOUT =====*/
@@ -261,7 +255,6 @@ img{
     height: 200px;
     border-radius: 50%;
     background-color: white;
-    
     overflow: hidden;
     border: solid 1px gray;
 }
@@ -277,7 +270,6 @@ img{
     font-size: var(--h2-font-size);
     color: var(--first-color);
     margin-bottom: var(--mb-1);
-    font-family: 'Poppins', sans-serif;
     font-weight: 800;
 }
 
@@ -286,14 +278,12 @@ img{
     margin-bottom: var(--mb-4);
     font-weight: 800;
     color: #000;
-    font-family: 'Poppins', sans-serif;
 }
 
 .about__text{
     margin-bottom: var(--mb-4);
     font-weight: 600;
     color: #000;
-    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -312,7 +302,6 @@ img{
 .skills__container{
     display: flex;
     justify-content: space-around;
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #000;
 }
@@ -320,7 +309,6 @@ img{
 .skill_box{
     text-align: center;
     padding-top: -50px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .skills__subtitle{
@@ -374,6 +362,7 @@ img{
     cursor: pointer;
     backdrop-filter: blur(10px);
     transition: .1s;
+    border-radius: 5rem;
 }
 
 .portfolio__img:hover .portfolio__link{
@@ -389,7 +378,6 @@ img{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    font-family: 'Poppins', sans-serif;
 }
 
 .contacto__rodrigo a{
@@ -402,7 +390,6 @@ img{
     text-align: center;
     display: flex;
     justify-content: center;
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 
@@ -417,7 +404,6 @@ img{
 }
 .footer__container{
     row-gap: 2rem;
-    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: #fff;
 }
@@ -459,9 +445,7 @@ img{
     color: var(--first-color)
 }
 
-/*===== MEDIA QUERIES =====*/
-
-/*===== Media estilos mobile =====*/
+/*===== MEDIA QUERIES MOBILE=====*/
     
 @media screen and (max-width: 767px){
     .header-nav__menu{
@@ -477,45 +461,53 @@ img{
     }
 }
 
+/*===== MEDIA QUERIES DESKTOP=====*/
+
 @media screen and (min-width: 768px){
     body{
         margin: 0;
     }
+    
     section{
         padding-top: 4rem;
     }
+    
     .section-title{
         margin-bottom: 3rem;
         font-weight: 900;
-        font-family: 'Poppins', sans-serif;
     }
+    
     .section-title::after{
         width: 64px;
         top: 3rem;
     }
+    
     .header-nav{
         height: calc(var(--header-height) + 1rem);
     }
 
     .logo{
-        font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;
     }
 
     .nav__list{
         display: flex;
     }
+    
     .nav__item{
         margin-left: var(--mb-4);
         margin-bottom: 0;
     }
+    
     .nav__toggle{
         display: none;
     }
+    
     .nav__link{
         color: var(--white-color);
-        font-family: 'Poppins', sans-serif;
+
     }
+    
     .nav__link:hover{
         color: var(--white-color);
     }
@@ -529,6 +521,7 @@ img{
         grid-template-rows: 1.7fr 1fr;
         row-gap: 0;
     }
+    
     .home__img{
         width: 245px;
         height: 245px;
@@ -542,13 +535,16 @@ img{
         text-align: initial;
         padding: 4rem 0;
     }
+    
     .about__img{
         width: 200px;
         height: 200px;
     }
+    
     .about__img img{
         width: 165px;
     }
+    
     .skills__container{
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -564,13 +560,14 @@ img{
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
+
     .contact__form{
         width: 300px;
     }
+
     .contacto__rodrigo{
         display: flex;
         justify-content: space-around;
-        font-family: 'Poppins', sans-serif;
     }
     
     .contacto__rodrigo a{
@@ -584,7 +581,6 @@ img{
         padding-top: 17px;
         display: flex;
         justify-content: center;
-        font-family: 'Poppins', sans-serif;
         font-weight: 600;
     }
 
@@ -598,13 +594,14 @@ img{
         margin-left: 150px;
         right: 0px;
         bottom: 0;
-        width: 50%;
+        font-size: 30px;
         height: 150px;
         text-align: center;
-        font-size:20px;
         vertical-align: middle; 
     }
 }
+
+/*===== MEDIA QUERIES DESKTOP (+1024PX)=====*/
 
 @media screen and (min-width: 1024px){
     .bd-grid{

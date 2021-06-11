@@ -1,8 +1,11 @@
 :root {
 	--fondo: #f2f2f2;
 	--color-temario: #c9c9c9;
+    --color-negro: #000000;
 	--temario-active: #ca280c;
 	--temario-active-border: #881c09;
+
+    --font-family: "Popins", sans-serif; 
 }
 
 html{
@@ -20,13 +23,13 @@ body {
 }
 
 .npm{
-    color: #000;
+    color: var(--color-negro);
     margin: 0px auto;
     max-width: 1500px;
     width: 95%;
     display: grid;
     grid-template-columns: 20% auto;
-    font-family: "Popins", sans-serif;
+    font-family: var(--font-family);
     gap: 12rem;
 }
 
@@ -108,6 +111,10 @@ aside .lista li:hover::before{
     margin-bottom: 25px;
 }
 
+.introduccion-description a{
+    color: #000000;
+}
+
 .introduccion-title{
     font-size: 50px;
     text-align: center;
@@ -139,6 +146,10 @@ aside .lista li:hover::before{
 .content img{
     margin-top: 20px;
     padding: 0px 15px;
+}
+
+.content a{
+    color: #000000;
 }
 
 .content span{
