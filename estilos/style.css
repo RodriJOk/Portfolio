@@ -10,6 +10,7 @@
 
     --first-color:#881c09;
     --second-color:#273374;
+    --third-color: #902c1a;
     --white-color:#FAFAFF;
     --dark-color: #2A3847;
     --text-color: #697477;
@@ -122,7 +123,7 @@ img{
 
 .nav__link{
     position: relative;
-    color: var(--dark-color);
+    color: var(--white-color);
 }
 
 .nav__link:hover{
@@ -134,13 +135,12 @@ img{
     color: var(--white-color);
     font-size: 1.5rem;
     cursor: pointer;
-    border: 1px solid pink;
 }
 
 /*===== Show menu =====*/
 
 .show{
-    right: 0;
+    left: 83px;
 }
 
 /*===== Active menu =====*/
@@ -152,7 +152,8 @@ img{
     height: .18rem;
     left: 0;
     top: 2rem;
-    background-color: var(--first-color);
+    /* background-color: var(--first-color); */
+    background-color: #ccc;
 }
 
 /*===== HOME =====*/
@@ -281,7 +282,6 @@ img{
     font-weight: 600;
     color: #000;
 }
-
 
 .about__social-icon{
     font-size: 1.4rem;
@@ -449,10 +449,12 @@ img{
         position: fixed;
         top: var(--header-height);
         right: -100%;
-        width: 80%;
+        width: 90%;
         height: 100%;
         padding: 2rem;
-        background-color: rgba(255,255, 255, .3);
+        background-color: var(--third-color);
+        border: 3px solid #ccc;
+        /* background-color: rgba(255,255, 255, .3); */
         transition: .1s ;
         backdrop-filter: blur(10px);
     }
