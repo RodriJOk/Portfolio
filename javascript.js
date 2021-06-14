@@ -123,7 +123,7 @@ const init = () => {
   typer
     .clearNow()
     .wait(1200)
-    .type("Me llamo Rodrigo 🧑🏻. ")
+    .type("Me llamo Alan Rodrigo Juarez 🧑🏻. ")
     .wait(500)
     .type("Un apasionado por la tecnologia, ")
     .type(" Javascript, ")
