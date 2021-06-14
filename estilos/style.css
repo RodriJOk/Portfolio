@@ -194,6 +194,7 @@ img{
 .home__scroll-link{
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
+    color: var(--white-color);
 }
 
 .home_mini_text{
@@ -285,6 +286,7 @@ img{
 .about__social-icon{
     font-size: 1.4rem;
     margin: 0 var(--mb-1);
+    color: var(--dark-color);
 }
 
 .about__social-icon:hover{
@@ -479,10 +481,6 @@ img{
         padding: 0px;
     }
 
-    .home__scroll-link{
-        color: var(--white-color);
-    }
-
     .home_mini_text{
         font-size: 1rem;
         width: 80%;
@@ -552,13 +550,15 @@ img{
         background-color: var(--white-color);
     }
     
-    .home__img{
-        width: 245px;
-        height: 245px;
-        right: 10%;
-        border-radius: 180px;
+    /* Home */
+
+    .home{
+        height: 650px;
     }
 
+    .home__title{
+        font-size: 3rem;
+    }
     .about__container{
         grid-template-columns: repeat(2, 1fr);
         align-items: center;

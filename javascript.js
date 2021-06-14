@@ -1,5 +1,3 @@
-/* ===== MENU SHOW ===== */
-
 /* ===== Escritura Texto ===== */
 
 class TextTyper {
@@ -86,44 +84,16 @@ class TextTyper {
   clear() {
     this.chain( () => this.container.innerText = '');
     return this;
-  }
-  stop() {
-    this.stopAnimation = true;
-    this.chain( () => this.stopAnimation = false );
-    return this;
-  }
-  clearNow() {
-    this.stop().clear();
-    return this;
-  }
-
+  } 
 }
 
 let typer = new TextTyper( document.getElementById('type-me') );
 
-document.querySelector('.buttons').addEventListener('click', (e) => {
-  let btnId = e.target.id;
-  switch (btnId) {
-    case 'stop':
-      typer.stop();
-      break;
-    case 'again':
-      typer
-        .clearNow()
-        .type("You liked that animation, didn\'t you? Don't forget to press the like button! NOW!", 1000);
-      break;
-    case 'clear':
-      typer.clearNow();
-      break;
-  }
-});
-
 const init = () => {
-  // typing is devided into a few function calls just to demonstrate flexibility
   typer
-    .clearNow()
     .wait(1200)
     .type("Me llamo Alan Rodrigo Juarez 🧑🏻. ")
+    
     .wait(500)
     .type("Un apasionado por la tecnologia, ")
     .type(" Javascript, ")
@@ -138,8 +108,6 @@ const init = () => {
     
     .wait(500)
     .type("❤")
-    /*.wait(4000)
-    .clear();*/
 }
 init();
 
@@ -181,9 +149,9 @@ function scrollActive(){
         sectionId = current.getAttribute('id')
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+            document.querySelector('.header-nav__menu a[href*=' + sectionId + ']').classList.add('active')
         }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+            document.querySelector('.header-nav__menu a[href*=' + sectionId + ']').classList.remove('active')
         }
     })
 }
