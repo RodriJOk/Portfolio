@@ -86,7 +86,7 @@
              </div> 
              <div id="dos">
                  <main class="content">
-                     <h3> NPM - ¿Que es?</h3>
+                     <h3> NPM - ¿Que es? 🤔</h3>
                      <p> 
                      NPM es un <strong>gestor de paquetes</strong> 📦, el mas popular que tiene Javascript, donde encontaras una gran cantidad de recursos para poder implentar en tus proyectos. 
                      Tambien vas a poder crear tus propios paquetes y compartilos con toda la comunidad.
@@ -97,7 +97,7 @@
              </div>       
              <div id="tres">
                  <main class="content">
-                  <h3>En Windows, sigue estos pasos:</h3>
+                  <h3>En Windows, sigue estos pasos: ✍🏻</h3>
       
                       <p><strong>1_ Descarga e instalacion de Node:</strong> Para poder empezar a trabajar con NPM, necesuitamos tener instalado Node.js en nuestro computador. Para ello vamos a su <a href="https://nodejs.dev/">sitio oficial</a> y descargamos Node.</p>
                       <img src="./imagenes/NPM/Install Node Windows.png" alt="Node" loading="lazy"> 
@@ -110,7 +110,7 @@
              </div>
              <div id="cuatro">
                  <main class="content">
-                  <h3>Inicia un proyecto con npm</h3>
+                  <h3>Inicia un proyecto con npm 🙌🏻</h3>
                   <p>Es de mucha importancia de que cuando vayas a crear un proyecto, lo inicialices con npm. Esto nos va a permitir generar una cierta configuracion con ciertos datos importantes para nuestro entorno, asi como tambien compartirlo con otros desarrolladores y puedan tener una nocion de lo que esta ocurriendo, para eso nos vamos a mover a nuestra terminal, en donde vamos a inicilaizar nuestro primer proyecto con NPM. Como muestra de ejemplo, voy a crear una carpeta con el nombre NPMjs y voy a posicionarme dentro de el con el comando <i>cd "nombrearchivo"</i>. </p>
                   <img src="./imagenes/NPM/Create folder.png" loading="lazy">
                   <p>Una vez creada nuesta carpeta del proyecto, ahora si estamos listos para poder inicializar nuestro proyecto con NPM. Pero ¿como? ¡Es muy sencillo! Solo debemos ejecutar el comando <i>npm init.</i> Al ejecutar este comando, nos va a permitira nosotros, crear el archivo <strong>package.json</strong>, con el cual vamos a tener una configuracion establecida, una descripcion del proyecto y cierto valores que necesita.</p>
@@ -153,7 +153,7 @@
              </div>
              <div id="quinto">
                  <main class="content">
-                     <h3>Instalacion de dependencias</h3>
+                     <h3>Instalacion de dependencias ☑📦</h3>
                      <p>Veamos como podemos instalar paquetes, desde un paquete convencional hasta uno de forma global, o con todas las opciones que tenemos para instalar paquetes dentro de tus proyectos. Quizas no utilices todas cuando este contruyendo un proyecto, pero que entiendas que existen, te van a yudar para obtener contexto de como trabajar con estos proyectos. Siguiendo con nuestro proyecto NPMjs, dentro de el vamos a crear una carpeta, llamada scr. Recordemos que los comandos que nos ofrece la consola para crear una carpeta es <strong>mkdir nombrecapeta</strong> (mkdir, del ingles make directory). En este caso, el comando que utilizaremos es <strong>mkdir scr</strong>. De esta forma creamos la carpeta, pero todavia no estamos en ella, por eso, para esto podemos ejecutar el comando <strong>cd nombrecarpetaamover</strong> (cd, del ingles change directory). En nuestro caso, ejecutamos el comando <strong>cd scr</strong>. Una vez realizado esto, dentro de nuestra carpeta src, podemos crear nuestra carpeta index.js. Para poder crear archivos, podemos utilizar el comando <strong>touch index.js</strong>. Partiendo de esto y de que ya estamos en la raiz del proyecto, aqui es donde nosotros vamos a empezar a instalar las dependencias. Estas dependencias son recursos que vamos a utilizar dentro de nuestro proyectos, partiendo de que hay una gran cantidad de estos recursos.</p>
                      <img src="./imagenes/NPM/create index.js.png" alt="Create index.js" loading="lazy">
                      <p>Imaginemos ahora que queremos instalar un paquete en nuestro proyecto que se encarga de manejar las fechas. Este paquete se llama moment. ¿Pero como lo podemos instalar? Es muy simple, lo podemos instalar con el comando <strong>npm init nombreDelPaquete</strong>. Algo interesante que debemos tener en cuenta es que a partir de la version 5 de npm, debiamos instalar la dependencia con el flag --save. Si continuamos con el ejemplo anterior, antes debiamos instalar moment asi : npm install moment --save. Pero luego de la version 5 de NPM, el flag --save se ejecuta por defecto, sea que lo pongamos explicitamente o no. ¿Pero que significa --save? Significa que este paquete que vas a instalar dentro del proyecto es necesario para que se encuentre <strong>en produccion</strong>. Entonces debemos de tener cuidado un paquete que estemos instalando es a produccion y cuando no lo es. De esta forma podemos identificar otro flag, que es <strong>--save-dev</strong>. Este flag nos va a permitir a nosotros establecer que este paquete que vamos a instalar solo es necesario en nuestro entorno local o en el <strong>entorno de desarrollo</strong>. Partiendo de esta diferencia, nosotros vamos a tomar decisiones cuando vamos a estar instalando las dependencias que requiere nuestro proyecto. Por que es muy importante no mandar dependencias a produccion, ni omitir algunas que deban estar en produccion. Partiendo de esto vamos a proceder con la instalacion. </p>
@@ -175,7 +175,7 @@
              </div>
              <div id="sexto">
                  <main class="content">
-                     <h3>Instalacion de dependencias a nivel global</h3>
+                     <h3>Instalacion de dependencias a nivel global 📌</h3>
                      <p>En algun momento te vas a topar con un paquete que debe ejecutarse y funcionar de forma "global". ¿Pero que significa esto? Cuando nosotros trabajamos con un proyecto, podemos instalar el paquete de <i>moment</i>, y moment puede ser utilizado dentro del contexto de mi proyecto. Pero no esta disponible en otros proyectos. Uno de los principales paquetes que utilizamos de forma global se llama nodemon. Nodemon nos permite generar que este a la "escucha" algun cambio o valor, y va a mentener nuestro proceso a algun comando que estemos ejecutando con Node. Entonces este paquete es requerido de forma global y de esta forma, nosotros debemos de instalarlo con un flag, y en este caso vamos a hacer el ejercicio, y en nuesta terminal vamos a instalar un paquete global. Un detalle importante a tener en cuenta es que cuando instalamos de forma global un paquete, lo debemos hacer con <strong>los permisos de administrador</strong> correspondientes. Esto lo instalamos con el comando <strong>npm install -g nodemon</strong>.
                      </p>
                      <img src="./imagenes/NPM/npm install -g nodemon .png" loading="lazy">
@@ -185,7 +185,7 @@
              </div>
              <div id="septimo">
                  <main class="content">
-                     <h3>Instalacion de dependencias con force</h3>
+                     <h3>Instalacion de dependencias con force ✅</h3>
                      <p>Continuando con la instalacion de dependencias en nuestro proyecto hay un flag que vamos a utilizar para distingir que esta dependencia no va a ser instalada dentro del proyecto, pero si queremos ver el output que nos retorna. El comando <strong>npm install nombreDelPaquete --dry-run</strong> <i>simula que instala una dependencia</i>, nos da el output de lo que esta sucediendo, que version instalaria y la cantidad de tiempo que demoraria en intalar los paquetes. Esto es muy util cuando estamos dudando entre si instalar o no.</p>
                      <img src="./imagenes/NPM/npm install react --dry-sun.png" alt="npm install --dry-sun" loading="lazy">
                      <p>Tambien contamos con el flag <strong>--force</strong> el cual nos va a permitir a nosotros, instalar este paquete <i>forzando esa instalacion</i> a que sea desde el ultimo recurso desde el servidor de npm. Este flag tambien tiene un atajo: <strong>npm install nombreDelPaquete -f</strong>.</p>
@@ -197,7 +197,7 @@
              </div>
              <div id="octavo">
                  <main class="content">
-                     <h3>Actualizar y eliminar paquetes.</h3>
+                     <h3>Actualizar y eliminar paquetes. 🔝❌</h3>
                      <p>Ahora vamos a revisar como podemos <strong>actualizar</strong> o darnos cuenta de que hay actualizaciones de estos paquetes. El comando que nos permite hacer esto es <strong>npm outdate</strong>. 
                      Al ejecutar este comando aparecera en forma de lista los paquetes que faltan actualizar.
                      </p>
@@ -216,25 +216,26 @@
              </div>
              <div id="noveno">
                  <main class="content">
-                     <h3>Uso de simbolos ^ (carrets) y ~ (virgurilla)</h3>
+                     <h3>Uso de simbolos ^ (carrets) y ~ (virgurilla) 🔣</h3>
                      <p>Antes de hablar sobre este punto en concreto, podemos hablar sobre la forma de manejar versionados</p>
                      <img src="./imagenes/NPM/versions.png" alt="Versions" loading="lazy">
                      <p>Nosotros, normalemnte tenemos tres valores. El primero <strong>major</strong>: Siempre va a ser un cambio muy importante.
                      En segundo lugar, tambien vamos a tener cambios menores o <strong>minor</strong>: Estos son cambios que añaden ciertas funcionalidades, pero que no son un gran paso para decir que es una version nueva. Y en tercer lugar, nos encontramos con los <strong>patch</strong>: Aqui encontramos cambios muy menores como bug fixes o algunos parches. Miremos un package-lock de un proyecto</p>
                      <img src="./imagenes/NPM/package-lock.png" alt="package-lock" loading="lazy">
-                     <p>Como bien podemos ver en esta ultima imagen, puede que nos encontremos con un archivo package-lock, que contenga algunos simbolos (^) o (~). Es por eso que es importante saber lo que representan ellos. En primer lugar, si mantenemos el
-                     ^ (carrets) dentro de la configuración de nuestro package estamos garantizando que cuando realicemos una actualización o tengamos un cambio que podamos realizar, vamos a hacer actualización de los cambios menores y de los parches o bug fixes. Para quedarnos en una sola versión, podemos eliminar el caret.
-                     En segundo lugar, si mantenemos la ~ (virgurilla) establece que vamos a recibir actualizaciones o cambios solamente de los cambios que son parches o bug fixes.</p>
+                     <p>Como bien podemos ver en esta ultima imagen, puede que nos encontremos con un archivo package-lock, que contenga simbolos como <strong>(^)</strong> y/o <strong>(~)</strong>. Es por eso que es importante saber lo que representan ambos. En primer lugar, si mantenemos el
+                     <strong>^ (carrets)</strong> dentro de la configuración de nuestro package en un paquete determinado, estamos garantizando su actualizacion que cuando este disponible solo cambios menores o <strong>minor</strong>. Para quedarnos en una sola versión, podemos eliminar el caret.
+                     En segundo lugar, si mantenemos la <strong>~ (virgurilla),</strong>  establece que se actualizara nuestra dependencia solamente de los cambios que son parches o bug fixes.</p>
                  </main>
              </div>
              <div id="decimo">
                  <main class="content">
-                     <h3>Seguridad</h3>
-                     <p>La importancia de la seguridad dentro de nuestro proyectos, es parte de nosotros como desarrolladores. Debemos esforzarnos por asegurarnos de no introducir ningun software malisioso. Cuando nosotros descargamos un proyecto de npm, debemos de saber que npm incluye una herramienta para que podamos saber que paquete se esta instalando, y si alguno de ellos debiera ser actualizado. Por ejemplo, si instalamos un paquete que puede llegar a tener vulnerabilidades de seguridad, nos los va a marcar. En ese caso podemos ejecutar el comando <strong>npm audit</strong>. Este comando nos va a permitir auditar o examinar nuestro proyecto, y ver si hay algun cambio que pueda afectar nuestro proyecto.  </p>
+                     <h3>Seguridad 🚨👮🏻‍♂️</h3>
+                     <p>La importancia de la seguridad dentro de nuestro proyectos, es parte de nosotros como desarrolladores, ya que debemos esforzarnos por asegurarnos de no introducir ningun software malicioso. Cuando nosotros descargamos un proyecto de npm, debemos de saber que npm incluye una herramienta para que podamos saber que paquete se esta instalando, y si alguno de ellos debiera ser actualizado. Por ejemplo, si instalamos un paquete que puede llegar a tener vulnerabilidades de seguridad, podemos ejecutar el comando <strong>npm audit</strong>. Este comando nos va a permitir auditar o examinar nuestro proyecto, y ver si hay algun cambio que pueda afectar nuestro proyecto.  </p>
                      <img src="./imagenes/NPM/npm audit.png" alt="npm audit" loading="lazy">
                      <p>Tambien podemos obteneer la informacion de nuestro proyecto auditado, en formato JSON, con el comando <strong>npm audit --json</strong>. Este comando nos genera un documento JSON, donde esta la informacion un poco mas detallada, de los que esta ocurriendo con nuestros paquetes. </p>
                      <img src="./imagenes/NPM/npm audit --json.png" alt="npm audit --json" loading="lazy">
                      <p>Hay un comando disponible, que es el comando <strong>npm audit fix</strong>. Este comando nos permite solucionar los errores de vulnerabilidad y seguridad.</p>
+                     <p>Hasta aqui hemos visto algunos conceptos importantes acerca de npm y muchos de los comando que querras saber al utilizar e instalar dependencias. Agradezco mucho el que hayas llegado hasta aqui 😀. Happy Coding ! ❤</p>
                  </main>
              </div>
          </main>    

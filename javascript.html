@@ -60,6 +60,48 @@
                 </div>    
             </div>
         </section>
+        <section class="npm">
+            <aside class="aside">
+                <div class="contenedor-temario" id="temario">
+                    <h3 class="titulo">Temario</h3>
+                    <ul class="lista">
+                        <li class="activo"><a href="#uno">Introduccion a Npm</a></li>
+                        <li><a href="#dos">¿Que es el DOM?</a></li>
+                        <li><a href="#tres">Scrips y DOM</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="main">
+                <div id="uno">
+                    <main class="introduccion">
+                        <h2 class="introduccion-title">Javascript - Guia basica</h2>    
+                        <p class="introduccion-description">En este ultimo tiempo, hemos visto como Javascript a tomado mucha popularidad en la web. Es por eso que en este articulo hablaremos de el a profundidad. Espero que te sea de mucha utilidad. 😊</p>
+                    </main>     
+                </div> 
+                
+                <div id="dos">
+                    <main class="content">
+                        <h3>¿Que es el DOM?</h3>
+                        <p>El DOM (Document Object Model) es la representacion que hace el navegador de un documento HTML. El navegador interpreta el archivo HTML y cuando termina de transformarlo al DOM (lo convierte a una estructura similiar a de un arbol) se dispara el evento <strong>DOMContentLoaded</strong> lo que significa que todo el documento se cargo y está disponible para ser manipulado.</p>
+                        <img src="./imagenes/Javascript/DOM.png">
+                    </main>
+                </div>
+
+
+                <div id="tres">
+                    <main class="content">
+                        <h3>Scrips y DOM</h3>
+                        <p>Algo que debemos de tener en cuenta, es que cuando se este procesando el DOM en el navegador y se encuentre con la etiqueta script, se va a <strong>detener la ejecucion</strong> y no se van a seguir leyendo o dibujando en el DOM mas elementos del HTML, hasta que <i>finalice</i> la ejecucion del script. 
+                        Es por este motivo que es fundamental el lugar en donde colocamos nuestro script en nuestro proyecto. Generalmente notaras que esta se coloca estrictamente antes de que se cierre la etiqueta de body. Si hicieramos lo contrario, y podriamos a nuestra etiqueta script estrictamente despues de la etiqueta body de apertura, podriamos toparnos con un error. Recordemos que la lectura de codigo ocurre de arriba hacia abajo, y puede que la funcionalidad de nuestro script dependa de alguna etiqueta o elemento de nuestro HTML. Veamos un ejemplo: 
+                        <img src="./imagenes/Javascript/Typeerror.png" alt="Typeerror" loading="lazy">
+                        En este ejemplo podemos notar que una fraccion de script esta junto antes de nuestro formulario. Lo interesante es que en el script tenemos el metodo querySelector que toma como referencia el formulario y luego se añade funcionalidad al evento de submit. Cuando esto queramos ejecutarlo, nos dara error. 
+
+                        Es por este motivo que podemos agregarle un atributo a nuesta etiqueta de script como lo son <i>async</i> o <i>defer</i>. Pero ¿como nos ayudan estos atributos? Tanto con las etiquetas async como defer nos permiten hacer llamados asincronicos a nuestro script <i>sin bloquear la ejecucion</i> de nuestro HTML. ¿Pero que las diferencia a ambas? Con async podemos hacer la petición de forma asíncrona y no vamos a detener la carga del DOM hasta que se haga la ejecución del código HTML.
+                        En cambio, con defer, la petición es igual asíncrona como en el async pero, como su nombre lo indica, va a deferir la ejecución del Javascript hasta el final de que se cargue todo el documento HTML.</p>
+                    </main>
+                </div>
+            </main>    
+           </section>
     </main>
     <!--===== FOOTER =====-->
     <footer class="footer section">

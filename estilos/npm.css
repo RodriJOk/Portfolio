@@ -21,10 +21,12 @@ html{
 body {
 	background-color: var(--fondo);
     color: var(--color-negro);
+    font: var(--font-family);
 }
 
 .npm{
     color: var(--color-negro);
+    padding-bottom: 100px;
     margin: 0px auto;
     max-width: 1500px;
     width: 95%;
@@ -101,32 +103,36 @@ body {
 }
 
 .introduccion{
+    font: var(--font-family);
     margin-bottom: 25px;
 }
 
-.introduccion-description a{
-    color: var(--color-negro);
-}
-
 .introduccion-title{
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     border-bottom: 5px solid #ccc;
     margin-bottom: 40px;
 }
 
 .introduccion-description{
-    font-size: 20px;
+    /* font-size: 50px; */
     text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.introduccion-description a{
+    color: var(--color-negro);
 }
 
 .content *{
+    font: var(--font-family);
      margin-top: 20px; 
 }
 
 .content h3{
     text-align: center;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -135,12 +141,25 @@ body {
     font-size: 20px;
 }
 
+.content p i{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.content p strong{
+    font-weight: 600;
+}
+
 .content a{
     border-bottom: 2px solid var(--color-negro);
 }
 
 .content ol{
     margin: 0px 15px;
+}
+
+.content ol strong{
+    font-weight: 600;
 }
 
 @media screen and (max-width: 767px) {
