@@ -68,6 +68,7 @@
                         <li class="activo"><a href="#uno">Javascript - Guia basica</a></li>
                         <li><a href="#dos">¿Que es el DOM?</a></li>
                         <li><a href="#tres">Scrips y DOM</a></li>
+                        <li><a href="#cuatro">Scope</a></li>
                     </ul>
                 </div>
             </aside>
@@ -87,17 +88,43 @@
                     </main>
                 </div>
 
-
                 <div id="tres">
                     <main class="content">
                         <h3>Scrips y DOM</h3>
                         <p>Algo que debemos de tener en cuenta, es que cuando se este procesando el DOM en el navegador y se encuentre con la etiqueta script, se va a <strong>detener la ejecucion</strong> y no se van a seguir leyendo o dibujando en el DOM mas elementos del HTML, hasta que <i>finalice</i> la ejecucion del script. 
-                        Es por este motivo que es fundamental el lugar en donde colocamos nuestro script en nuestro proyecto. Generalmente notaras que esta se coloca estrictamente antes de que se cierre la etiqueta de body. Si hicieramos lo contrario, y podriamos a nuestra etiqueta script estrictamente despues de la etiqueta body de apertura, podriamos toparnos con un error. Recordemos que la lectura de codigo ocurre de arriba hacia abajo, y puede que la funcionalidad de nuestro script dependa de alguna etiqueta o elemento de nuestro HTML. Veamos un ejemplo: 
+                        Es por este motivo que es fundamental el lugar en donde colocamos nuestro script en nuestro proyecto. Generalmente notaras que esta se coloca estrictamente antes de que se cierre la etiqueta de body. Si hicieramos lo contrario, y podriamos a nuestra etiqueta script estrictamente despues de la etiqueta body de apertura, podriamos toparnos con un error. Recordemos que la lectura de codigo ocurre de arriba hacia abajo, y puede que la funcionalidad de nuestro script dependa de alguna etiqueta o elemento de nuestro HTML. Veamos un ejemplo: </p>
                         <img src="./imagenes/Javascript/Typeerror.png" alt="Typeerror" loading="lazy">
-                        En este ejemplo podemos notar que una fraccion de script esta junto antes de nuestro formulario. Lo interesante es que en el script tenemos el metodo querySelector que toma como referencia el formulario y luego se añade funcionalidad al evento de submit. Cuando esto queramos ejecutarlo, nos dara error. 
+                        <p>En este ejemplo podemos notar que una fraccion de script esta junto antes de nuestro formulario. Lo interesante es que en el script tenemos el metodo querySelector que toma como referencia el formulario y luego se añade funcionalidad al evento de submit. Cuando esto queramos ejecutarlo, nos dara error. 
 
                         Es por este motivo que podemos agregarle un atributo a nuesta etiqueta de script como lo son <i>async</i> o <i>defer</i>. Pero ¿como nos ayudan estos atributos? Tanto con las etiquetas async como defer nos permiten hacer llamados asincronicos a nuestro script <i>sin bloquear la ejecucion</i> de nuestro HTML. ¿Pero que las diferencia a ambas? Con async podemos hacer la petición de forma asíncrona y no vamos a detener la carga del DOM hasta que se haga la ejecución del código HTML.
                         En cambio, con defer, la petición es igual asíncrona como en el async pero, como su nombre lo indica, va a deferir la ejecución del Javascript hasta el final de que se cargue todo el documento HTML.</p>
+                    </main>
+                </div>
+
+                <div id="cuatro">
+                    <main class="content">
+                        <h3>Scope</h3>
+                        <p>El scope o ambito de una variable representa el tiempo de vida de la que esta existe, puede ser una variable o ela rgumento de una funcion. Esto es muyy importante es los lenguajes de programacion por que evita que reescribamos una variable que ya habiamos definido. Por desgracia, Javascript no siempre conto con el mejor sistema de scope y de variables. Por suerte el lenguaje a cambiado, a mejorado muchisimo, y hoy tenemos dos declaraciones de variables mas como lo son let y const, que nos ayudan a evitar problemas comunes. Comencemos con el scope global. ¿Que es el scope global? Veamoslo con un ejemplo</p>
+                        <img src="./imagenes/Javascript/Scope-Global.png" alt="Scope Global" loading="lazy">
+                        <p>Esta variable llamada "nombre" que hemos declarado, es una variable que tiene un alcance global. Pero ¿Por que estamos tan seguro de ello? Bueno, esto tambien lo podemos ver en la consola. Si en ella buscamos la variable, la encontraremos de forma global.  </p>
+                        <img src="./imagenes/Javascript/Scope-Global-Console.png" alt="Scope Global Console">
+                        <p>Como vemos en la imagen, si buscamos nuestra variable dentro del objeto windows, la podremos encontrar. Pero ¿por que window?
+                        Window es nuestro ambito global. Toda variable que declaremos fue de una funcion, fuera de un bloque, va a quedar en el scope global. Y ese scope es window. Algo que pudiera ocurrir en este ambito de scope, es el riesgo de sobreescritura. Continuemos con el ejemplo anterior, y veamos que ocurre:</p>
+                        <img src="./imagenes/Javascript/Scope-Global-Sobreescritura.png">
+                        <p>En este caso, hemos sobreescrito la variable "nombre". Veamos que ocurre en la consola:</p>
+                        <img src="./imagenes/Javascript/Scope-Global-Sobreescritura-Consola.png">
+                        <p>¡Si, asi es! Nuestra variable que contenia el valor de "Alan Rodrigo", se ha sobreescrito por el valor "Otro nombre". </p>
+                        <p>Veamos ahora el scope en las funciones (o Function Scope). Estas son variables declaradas dentro de una funcion, y por lo tanto dentro de la funcion se crea un scope, en donde las variables seran visibles dentro de la misma. Veamos un ejemplo para entenderlo mejor. </p>
+                        <img src="./imagenes/Javascript/Function Scope.png">
+                        <p>En la imagen, podemos ver una funcion llamada "imprimirNumeros", pero que a su vez, dentro de ella, hay un ciclo for por ejecutarse, y que cuando lo haga, va a mostar por consola los numeros correspondientes. Quizas pienses que por consola, se van a mostar numeros del 0-9 ordenados segun la ejecucion. Pero esto no es correcto, lo que se va a mostar por consola es lo siguiente.</p>
+                        <img src="./imagenes/Javascript/Function-Scope-Console.png">
+                        <p>Pero, ¿que esta ocurriendo? 😨</p>
+                        <p>Tranquilo, te lo explicare. Lo que esta ocurriendo es que se ha mostrado por consola 10 veces el numero 10. Lo que esta ocurriendo, tiene que ver con Funcion Scope. Hya algo que Javascript hace con la variable var. Cuando se ejecute el programa, lo que va a ocurrir lo mostrare en la imagen.</p>
+                        <img src="./imagenes/Javascript/Funcion-Scope-Javascript.png">
+                        <p>Javascript va a declarar por fuera la variable, va a comenzar el loop del ciclo for. Pero el loop va a terminar antes de que se ejecute la funcion dentro del setTimeout. Tanto es asi que al momento de que se ejecute la funcion del setTimeout, el loop habra terminado y el valor de i sera 10. Es por eso que vemos en consola 10 veces el numero 10. Este problema lo podemos resolver de la siguiente manera.</p>
+                        <img src="./imagenes/Javascript/Funcion-Scope-Solucion.png" alt="Funcion Scope Solution" loading="lazy">
+                        <p>Y finalmente, podemos ver el resultado esperado por la consola.</p>
+                        <img src="./imagenes/Javascript/Funcion-Scope-Solucion-Consola.png">
                     </main>
                 </div>
             </main>    
