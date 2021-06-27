@@ -69,6 +69,7 @@
                         <li><a href="#dos">¿Que es el DOM?</a></li>
                         <li><a href="#tres">Scrips y DOM</a></li>
                         <li><a href="#cuatro">Scope</a></li>
+                        <li><a href="#cinco">Pila de ejecucion</a></li>
                     </ul>
                 </div>
             </aside>
@@ -104,7 +105,7 @@
                 <div id="cuatro">
                     <main class="content">
                         <h3>Scope</h3>
-                        <p>El scope o ambito de una variable representa el tiempo de vida de la que esta existe, puede ser una variable o ela rgumento de una funcion. Esto es muyy importante es los lenguajes de programacion por que evita que reescribamos una variable que ya habiamos definido. Por desgracia, Javascript no siempre conto con el mejor sistema de scope y de variables. Por suerte el lenguaje a cambiado, a mejorado muchisimo, y hoy tenemos dos declaraciones de variables mas como lo son let y const, que nos ayudan a evitar problemas comunes. Comencemos con el scope global. ¿Que es el scope global? Veamoslo con un ejemplo</p>
+                        <p>El scope o ambito de una variable representa el tiempo de vida de la que esta existe, puede ser una variable o ela rgumento de una funcion. Esto es muy importante es los lenguajes de programacion por que evita que reescribamos una variable que ya habiamos definido. Por desgracia, Javascript no siempre conto con el mejor sistema de scope y de variables. Por suerte el lenguaje a cambiado, a mejorado muchisimo, y hoy tenemos dos declaraciones de variables mas como lo son let y const, que nos ayudan a evitar problemas comunes. Veamos las caracteristicas de cuatro Scopes: Global Scope, Local Scope, Function Scope y Module Scope. Comencemos con el Scope Global. ¿Que es el scope global? Veamoslo con un ejemplo</p>
                         <img src="./imagenes/Javascript/Scope-Global.png" alt="Scope Global" loading="lazy">
                         <p>Esta variable llamada "nombre" que hemos declarado, es una variable que tiene un alcance global. Pero ¿Por que estamos tan seguro de ello? Bueno, esto tambien lo podemos ver en la consola. Si en ella buscamos la variable, la encontraremos de forma global.  </p>
                         <img src="./imagenes/Javascript/Scope-Global-Console.png" alt="Scope Global Console">
@@ -124,7 +125,26 @@
                         <p>Javascript va a declarar por fuera la variable, va a comenzar el loop del ciclo for. Pero el loop va a terminar antes de que se ejecute la funcion dentro del setTimeout. Tanto es asi que al momento de que se ejecute la funcion del setTimeout, el loop habra terminado y el valor de i sera 10. Es por eso que vemos en consola 10 veces el numero 10. Este problema lo podemos resolver de la siguiente manera.</p>
                         <img src="./imagenes/Javascript/Funcion-Scope-Solucion.png" alt="Funcion Scope Solution" loading="lazy">
                         <p>Y finalmente, podemos ver el resultado esperado por la consola.</p>
-                        <img src="./imagenes/Javascript/Funcion-Scope-Solucion-Consola.png">
+                        <img src="./imagenes/Javascript/Funcion-Scope-Solucion-Consola.png" alt="Function Scope Solution Consola" loading="lazy"> 
+                        <p>Pasemos ahora a analizar lo que es el Block Scope. Se conoce como Block Scope a las variables definidas dentro de un bloque, por ejemplo variables declaradas dentro un loop while o for. Se usa let y const para declarar este tipo de variables. Y esto lo podemos ver reflejado tambien con un ejemplo.</p>
+                        <img src="./imagenes/Javascript/Block-Scope.png" alt="Block Scope" loading="lazy">
+                        <p>Te hago una pregunta, querido lector. ¿Que crees que se va a mostrar por consola?. <br> Si, lo que se va a mostrar por consola es un error, y es el siguiente</p>
+                        <img src="./imagenes/Javascript/Block-Scope-Console-Error.png">
+                        <p>Este error ocurre por que el console.log que esta por fuera del ciclo for (linea 31) no puede encontrar a la variable con el nombre i. La variable i solo esta disponible para ser utilizada dentro de su scope, en este caso, el ciclo for. </p>
+                        <p>Por ultimo, nos queda por analizar Module Scope. ¿Que es Module Scope? La funcionalidad de Module Scope es limitar el alcance de una variable a un archivo. 
+                            Podemos denotar el Module Scope cuando se denotamos un script con el atributo type="module". </p>
+                        <img src="./imagenes/Javascript/Module Scope.png" alt="Block Scope" loading="lazy">
+                        <p>Miremos que ocurre cuando queremos buscar una variable que se encuentra dentro del archivo index.js como la variable persona.</p>
+                        <img src="./imagenes/Javascript/Module Scope Consola Error.png" alt="Block Scope Console Error" loading="lazy">
+                        <p>¡Asi es! Si. Module Scope lo que genera es limitar el ambito en el cual se puedan acceder a las variables. Algo que debemos de tener en cuenta es que Module Scope, no esta disponible en todos los navegadores, pero si en los mas modernos y conocidos.</p>
+                    </main>
+                </div>
+
+                <div id="cinco">
+                    <main class="content">
+                        <h3>Pila de ejecucion (Call Stack)</h3>
+                        <p>¿Que es la pila de ejecucion o Call Stack? Este es uno de los temas importantes y fundamentales que debemos de aprender para dominar Javascript. La pila de ejecución, o call stack, es una metodología que utilizan los motores de JavaScript a la hora de ejecutar nuestro código. Podemos comparar a la pila de ejecucion a una lista de tareas de tareas pendientes que tienen los motores de Javascript, que les sirve para saber que tareas tienen por ejecutar, mantener el orden de ejecucion, saber cual es la proxima tarea por realizar y tambien asegurarse de cumplir con todas las tareas por realizar. Vamos a hablar mucho de la pila de ejecucion, pero, ¿que caracteristicas tienen estas? Podemos decir que la pila de ejecucion es un lugar en donde se alojan las funciones por ejecutarse. Estructuralemnte hablando, podemos imaginarnos a la pila de ejecucion a un contenedor con un orificio en la parte superior. Como es el unico orificio por la parte de arriba, si el motor agrega una funcion a ejecutar, esta permanecera alli hasta ejecutarse. Es por eso que podemos afirmar que la Pila de Ejecucion opera de formal lineal y unidireccional. Tambien debemos de tener en cuenta que el motor de Javascript, al recibir una tarea, le da tanta importancia, que la necesita ejecutar lo antes posible. Es por eso que si hablamos de Pila de Ejecucion, tambien hablamos de LIFO. El LIFO, (por sus siglas en ingles Last In, First Out) es una metodología que significa que la ultima funcion en entrar, es la primera en salir. Y esto tiene mucha logica, por que digimos que estructuralmente, la Pila de Ejecucion es unidireccional y lineal. Pongamos un ejemplo: Imaginemos que tenemos una pila alta con platos. Si nosotros queremos sacar un plato del principio o del medio, lo mas seguro es quitar los ultimos platos hasta acceder al que necesitamos. De lo contrario, si quisiera sacar el plato que desee, sin sacar los anteriores, podria ocurrir un desastre. Podrian caerse todos los platos, y romperse. Veamos la siguiente imagen ilustrativa, para comprender como funciona la Pila de Ejecucion.</p>
+                        <img src="./imagenes/Javascript/Call Stack.png" alt="Call Stack" loading="lazy">
                     </main>
                 </div>
             </main>    
