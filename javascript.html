@@ -69,7 +69,8 @@
                         <li><a href="#dos">¿Que es el DOM?</a></li>
                         <li><a href="#tres">Scrips y DOM</a></li>
                         <li><a href="#cuatro">Scope</a></li>
-                        <li><a href="#cinco">Pila de ejecucion</a></li>
+                        <li><a href="#cinco">Closure</a></li>
+                        <li><a href="#seis">Pila de ejecucion</a></li>
                     </ul>
                 </div>
             </aside>
@@ -148,7 +149,14 @@
                         <img src="./imagenes/Javascript/Call Stack.png" alt="Call Stack" loading="lazy">
                         <p>Como bien podemos ver en la imagen, a la pila de ejecucion llegan referencias de funciones. Las primera que llegaban, se tenian que realizar o ejecutar lo antes posibles, para de esa manera continuar con la ejecucion de todas las demas referencias de funciones. Es por eso que cuando se finalice la ejecucion de la referencia 3, esta se ira de la pila, y el motor de JS continuara con la ejecucion de la referencia 2. Asi sucesivamente hasta dejar la pila de ejecucion vacia. </p>
                         <img src="./imagenes/Javascript/Call Stack Delete.png" alt="Call Stack Delete" loading="lazy">
-                        <p>De seguro, te estaras preguntando, ¿que el eso de anonymos que aparece por debajo de la pila? Es muy sencillo</p>
+                        <p>De seguro, te estaras preguntando, ¿que es eso de anonymos que aparece por debajo de la pila? Es muy sencillo. Cuando ejecutamos un programa en Javascript, la primer funcion que se agrega a la pila es una funcion anonima, que envuelve a todo el programa. Es como si fuera el hilo principal del programa. Y es por eso que cuando esta funcion salga de la pila, significa que se termino la ejecucion del programa principal. Pero, veamos un ejemplo concreto de todo lo que estamos analizando.</p>
+                        <img src="./imagenes/Javascript/Call Stack Code.png" alt="Call Stack Code" loading="lazy">
+                        <p>Aqui en este codigo, podemos ver como una primera funcion, esta anidada a una segunda funcion, y a su vez est&aacute; a una tercera. Este ejemplo nos sirve para poder ver el call stack en accion. Y tambien contamos con una herramienta en los navegadores que nos permite ver el proceso que realiza el call Stack. Es por eso que al ejecutar este codigo, tambien puedes abrir la consola de desarrollo (F12), ir a Sources y luego a Page. Alli buscaras tu archivo con la extension .js. En mi caso callstack.js.</p>
+                        <img src="./imagenes/Javascript/Call Stack Sources.png" alt="Call Stack Sources" loading="lazy">
+                        <p>Una vez que seleccionemos el archivo podremos ver nuestro codigo. Y loq eu vamos a hacer en el, es colocar un breakpoint en el ultimo return (En mi caso linea 10). Y ejecutamos el codigo. </p>
+                        <img src="./imagenes/Javascript/Call Stack Sources Code.png" alt="Call Stack Sources Code" loading="lazy">
+                        <p>En esta imagen, podemos ver al Call Stack en accion. Aqui podemos ver el orden de ejecucion de nuestro archivo. Este apila las referencia de ejecucion de las funciones de la mas "antigua" hasta la mas "reciente". Y para el Call Stack, es de vital importancia ejecuctar la ultima tarea. De lo contrario no podra seguir con la ejecucion. En el caso de la imagen, la referencia de la "terceraFuncion" es tan importante, que la necesita ejecutar lo antes posible.</p>
+                        <p>Asi es como funciona el Call Stack o la Pila de Ejecucion. Espero haber sido claro con las explicaciones y que se haya comprendido los conceptos principales. </p>
                     </main>
                 </div>
             </main>    
