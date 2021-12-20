@@ -351,9 +351,9 @@ img{
     justify-content: center;
     align-items: center;
     background-color: rgba(255,255, 255, .3);
+    backdrop-filter: blur(10px);
     border-radius: .5rem;
     cursor: pointer;
-    backdrop-filter: blur(10px);
     transition: .1s;
     border-radius: 5rem;
 }
@@ -387,6 +387,43 @@ img{
 
 .contacto__parrafo{
     padding-left: 20px;
+}
+
+/*===== ARTICLES =====*/
+.personal-articles{
+    text-align: center;
+}
+
+.personal-articles_single{
+    border-radius: 5rem;
+    width: 85%;
+    border: solid 1px var(--gray-color);
+    margin: 15px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #1c2c3d;
+}
+
+
+.personal-articles_single:hover{
+    background-color: rgba(255,255, 255, .3);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    color: black;  
+} 
+
+.personal-articles_single:hover span{
+    color: black;
+} 
+
+.read-more{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
 }
 
 /*===== FOOTER =====*/
