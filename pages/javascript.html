@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <link href="./estilos/style.css" rel="stylesheet">
+    <link href="../estilos/style.css" rel="stylesheet">
     <title>Alan Rodrigo Juarez</title>
 </head>
 <body>
@@ -85,7 +85,7 @@
                     <main class="content">
                         <h3>¿Que es el DOM?</h3>
                         <p>El DOM (Document Object Model) es la representacion que hace el navegador de un documento HTML. El navegador interpreta el archivo HTML y cuando termina de transformarlo al DOM (lo convierte a una estructura similiar a de un arbol) se dispara el evento <strong>DOMContentLoaded</strong> lo que significa que todo el documento se cargo y está disponible para ser manipulado.</p>
-                        <img src="./imagenes/Javascript/DOM.png">
+                        <img src="../imagenes/Javascript/DOM.png">
                     </main>
                 </div>
 
@@ -94,7 +94,7 @@
                         <h3>Scrips y DOM</h3>
                         <p>Algo que debemos de tener en cuenta, es que cuando se este procesando el DOM en el navegador y se encuentre con la etiqueta script, se va a <strong>detener la ejecucion</strong> y no se van a seguir leyendo o dibujando en el DOM mas elementos del HTML, hasta que <i>finalice</i> la ejecucion del script. 
                         Es por este motivo que es fundamental el lugar en donde colocamos nuestro script en nuestro proyecto. Generalmente notaras que esta se coloca estrictamente antes de que se cierre la etiqueta de body. Si hicieramos lo contrario, y podriamos a nuestra etiqueta script estrictamente despues de la etiqueta body de apertura, podriamos toparnos con un error. Recordemos que la lectura de codigo ocurre de arriba hacia abajo, y puede que la funcionalidad de nuestro script dependa de alguna etiqueta o elemento de nuestro HTML. Veamos un ejemplo: </p>
-                        <img src="./imagenes/Javascript/Typeerror.png" alt="Typeerror" loading="lazy">
+                        <img src="../imagenes/Javascript/Typeerror.png" alt="Typeerror" loading="lazy">
                         <p>En este ejemplo podemos notar que una fraccion de script esta junto antes de nuestro formulario. Lo interesante es que en el script tenemos el metodo querySelector que toma como referencia el formulario y luego se añade funcionalidad al evento de submit. Cuando esto queramos ejecutarlo, nos dara error. 
 
                         Es por este motivo que podemos agregarle un atributo a nuesta etiqueta de script como lo son <i>async</i> o <i>defer</i>. Pero ¿como nos ayudan estos atributos? Tanto con las etiquetas async como defer nos permiten hacer llamados asincronicos a nuestro script <i>sin bloquear la ejecucion</i> de nuestro HTML. ¿Pero que las diferencia a ambas? Con async podemos hacer la petición de forma asíncrona y no vamos a detener la carga del DOM hasta que se haga la ejecución del código HTML.
@@ -106,36 +106,36 @@
                     <main class="content">
                         <h3>Scope</h3>
                         <p>El scope o ambito de una variable representa el tiempo de vida de la que esta existe, puede ser una variable o ela rgumento de una funcion. Esto es muy importante es los lenguajes de programacion por que evita que reescribamos una variable que ya habiamos definido. Por desgracia, Javascript no siempre conto con el mejor sistema de scope y de variables. Por suerte el lenguaje a cambiado, a mejorado muchisimo, y hoy tenemos dos declaraciones de variables mas como lo son let y const, que nos ayudan a evitar problemas comunes. Veamos las caracteristicas de cuatro Scopes: Global Scope, Local Scope, Function Scope y Module Scope. Comencemos con el Scope Global. ¿Que es el scope global? Veamoslo con un ejemplo</p>
-                        <img src="./imagenes/Javascript/Scope-Global.png" alt="Scope Global" loading="lazy">
+                        <img src="../imagenes/Javascript/Scope-Global.png" alt="Scope Global" loading="lazy">
                         <p>Esta variable llamada "nombre" que hemos declarado, es una variable que tiene un alcance global. Pero ¿Por que estamos tan seguro de ello? Bueno, esto tambien lo podemos ver en la consola. Si en ella buscamos la variable, la encontraremos de forma global.  </p>
-                        <img src="./imagenes/Javascript/Scope-Global-Console.png" alt="Scope Global Console">
+                        <img src="../imagenes/Javascript/Scope-Global-Console.png" alt="Scope Global Console">
                         <p>Como vemos en la imagen, si buscamos nuestra variable dentro del objeto windows, la podremos encontrar. Pero ¿por que window?
                         Window es nuestro ambito global. Toda variable que declaremos fue de una funcion, fuera de un bloque, va a quedar en el scope global. Y ese scope es window. Algo que pudiera ocurrir en este ambito de scope, es el riesgo de sobreescritura. Continuemos con el ejemplo anterior, y veamos que ocurre:</p>
-                        <img src="./imagenes/Javascript/Scope-Global-Sobreescritura.png">
+                        <img src="../imagenes/Javascript/Scope-Global-Sobreescritura.png">
                         <p>En este caso, hemos sobreescrito la variable "nombre". Veamos que ocurre en la consola:</p>
-                        <img src="./imagenes/Javascript/Scope-Global-Sobreescritura-Consola.png">
+                        <img src="../imagenes/Javascript/Scope-Global-Sobreescritura-Consola.png">
                         <p>¡Si, asi es! Nuestra variable que contenia el valor de "Alan Rodrigo", se ha sobreescrito por el valor "Otro nombre". </p>
                         <p>Veamos ahora el scope en las funciones (o Function Scope). Estas son variables declaradas dentro de una funcion, y por lo tanto dentro de la funcion se crea un scope, en donde las variables seran visibles dentro de la misma. Veamos un ejemplo para entenderlo mejor. </p>
-                        <img src="./imagenes/Javascript/Function Scope.png">
+                        <img src="../imagenes/Javascript/Function Scope.png">
                         <p>En la imagen, podemos ver una funcion llamada "imprimirNumeros", pero que a su vez, dentro de ella, hay un ciclo for por ejecutarse, y que cuando lo haga, va a mostar por consola los numeros correspondientes. Quizas pienses que por consola, se van a mostar numeros del 0-9 ordenados segun la ejecucion. Pero esto no es correcto, lo que se va a mostar por consola es lo siguiente.</p>
-                        <img src="./imagenes/Javascript/Function-Scope-Console.png">
+                        <img src="../imagenes/Javascript/Function-Scope-Console.png">
                         <p>Pero, ¿que esta ocurriendo? 😨</p>
                         <p>Tranquilo, te lo explicare. Lo que esta ocurriendo es que se ha mostrado por consola 10 veces el numero 10. Lo que esta ocurriendo, tiene que ver con Funcion Scope. Hya algo que Javascript hace con la variable var. Cuando se ejecute el programa, lo que va a ocurrir lo mostrare en la imagen.</p>
-                        <img src="./imagenes/Javascript/Funcion-Scope-Javascript.png">
+                        <img src="../imagenes/Javascript/Funcion-Scope-Javascript.png">
                         <p>Javascript va a declarar por fuera la variable, va a comenzar el loop del ciclo for. Pero el loop va a terminar antes de que se ejecute la funcion dentro del setTimeout. Tanto es asi que al momento de que se ejecute la funcion del setTimeout, el loop habra terminado y el valor de i sera 10. Es por eso que vemos en consola 10 veces el numero 10. Este problema lo podemos resolver de la siguiente manera.</p>
-                        <img src="./imagenes/Javascript/Funcion-Scope-Solucion.png" alt="Funcion Scope Solution" loading="lazy">
+                        <img src="../imagenes/Javascript/Funcion-Scope-Solucion.png" alt="Funcion Scope Solution" loading="lazy">
                         <p>Y finalmente, podemos ver el resultado esperado por la consola.</p>
-                        <img src="./imagenes/Javascript/Funcion-Scope-Solucion-Consola.png" alt="Function Scope Solution Consola" loading="lazy"> 
+                        <img src="../imagenes/Javascript/Funcion-Scope-Solucion-Consola.png" alt="Function Scope Solution Consola" loading="lazy"> 
                         <p>Pasemos ahora a analizar lo que es el Block Scope. Se conoce como Block Scope a las variables definidas dentro de un bloque, por ejemplo variables declaradas dentro un loop while o for. Se usa let y const para declarar este tipo de variables. Y esto lo podemos ver reflejado tambien con un ejemplo.</p>
-                        <img src="./imagenes/Javascript/Block-Scope.png" alt="Block Scope" loading="lazy">
+                        <img src="../imagenes/Javascript/Block-Scope.png" alt="Block Scope" loading="lazy">
                         <p>Te hago una pregunta, querido lector. ¿Que crees que se va a mostrar por consola?. <br> Si, lo que se va a mostrar por consola es un error, y es el siguiente</p>
-                        <img src="./imagenes/Javascript/Block-Scope-Console-Error.png">
+                        <img src="../imagenes/Javascript/Block-Scope-Console-Error.png">
                         <p>Este error ocurre por que el console.log que esta por fuera del ciclo for (linea 31) no puede encontrar a la variable con el nombre i. La variable i solo esta disponible para ser utilizada dentro de su scope, en este caso, el ciclo for. </p>
                         <p>Por ultimo, nos queda por analizar Module Scope. ¿Que es Module Scope? La funcionalidad de Module Scope es limitar el alcance de una variable a un archivo. 
                             Podemos denotar el Module Scope cuando se denotamos un script con el atributo type="module". </p>
-                        <img src="./imagenes/Javascript/Module Scope.png" alt="Block Scope" loading="lazy">
+                        <img src="../imagenes/Javascript/Module Scope.png" alt="Block Scope" loading="lazy">
                         <p>Miremos que ocurre cuando queremos buscar una variable que se encuentra dentro del archivo index.js como la variable persona.</p>
-                        <img src="./imagenes/Javascript/Module Scope Consola Error.png" alt="Block Scope Console Error" loading="lazy">
+                        <img src="../imagenes/Javascript/Module Scope Consola Error.png" alt="Block Scope Console Error" loading="lazy">
                         <p>¡Asi es! Si. Module Scope lo que genera es limitar el ambito en el cual se puedan acceder a las variables. Algo que debemos de tener en cuenta es que Module Scope, no esta disponible en todos los navegadores, pero si en los mas modernos y conocidos.</p>
                     </main>
                 </div>
@@ -145,15 +145,15 @@
                         <h3>Pila de ejecucion (Call Stack)</h3>
                         <p>¿Que es la pila de ejecucion o Call Stack? Este es uno de los temas importantes y fundamentales que debemos de aprender para dominar Javascript. La pila de ejecución, o call stack, es una metodología que utilizan los motores de JavaScript a la hora de ejecutar nuestro código. Podemos comparar a la pila de ejecucion a una lista de tareas pendientes que tienen los motores de Javascript, que les sirve para saber que tareas tienen por ejecutar, mantener el orden de ejecucion, saber cual es la proxima tarea por realizar y tambien asegurarse de cumplir con todas las tareas por realizar. </p>
                         <p>Vamos a hablar mucho de la pila de ejecucion, pero, ¿que caracteristicas tiene esta? Podemos decir que la pila de ejecucion es un lugar en donde se alojan las referencias de funciones por ejecutarse. Estructuralmente hablando, podemos imaginarnos a la pila de ejecucion a un contenedor con un orificio en la parte superior. Como es el unico orificio por la parte de arriba, si el motor agrega una referencia de una funcion a ejecutar, esta permanecera alli hasta ejecutarse. Es por eso que podemos afirmar que la Pila de Ejecucion opera de formal lineal y unidireccional. Tambien debemos de tener en cuenta que el motor de Javascript, al recibir una referencia de una funcion, le da tanta importancia, que la necesita ejecutar lo antes posible. Es por eso que si hablamos de Pila de Ejecucion, tambien hablamos de LIFO. El LIFO, (por sus siglas en ingles Last In, First Out) es una metodología que significa que la ultima funcion en entrar, es la primera en salir. Y esto tiene mucha logica, por que digimos que estructuralmente, la Pila de Ejecucion es unidireccional y lineal. Pongamos un ejemplo: Imaginemos que tenemos una pila alta con platos. Si nosotros queremos sacar un plato del principio o del medio, lo mas seguro es quitar los ultimos platos hasta acceder al que necesitamos. De lo contrario, si quisiera sacar el plato que desee, sin sacar los anteriores, podria ocurrir un desastre. Podrian caerse todos los platos, y romperse. Veamos la siguiente imagen ilustrativa, para comprender como funciona la Pila de Ejecucion.</p>
-                        <img src="./imagenes/Javascript/Call Stack.png" alt="Call Stack" loading="lazy">
+                        <img src="../imagenes/Javascript/Call Stack.png" alt="Call Stack" loading="lazy">
                         <p>Como bien podemos ver en la imagen, a la pila de ejecucion llegan referencias de funciones. Las primera que llegaban, se tenian que realizar o ejecutar lo antes posibles, para de esa manera continuar con la ejecucion de todas las demas referencias de funciones. Es por eso que cuando se finalice la ejecucion de la referencia 3, esta se ira de la pila, y el motor de JS continuara con la ejecucion de la referencia 2. Asi sucesivamente hasta dejar la pila de ejecucion vacia. </p>
-                        <img src="./imagenes/Javascript/Call Stack Delete.png" alt="Call Stack Delete" loading="lazy">
+                        <img src="../imagenes/Javascript/Call Stack Delete.png" alt="Call Stack Delete" loading="lazy">
                         <p>De seguro, te estaras preguntando, ¿que es eso de anonymos que aparece por debajo de la pila? Es muy sencillo. Cuando ejecutamos un programa en Javascript, la primer funcion que se agrega a la pila es una funcion anonima, que envuelve a todo el programa. Es como si fuera el hilo principal del programa. Y es por eso que cuando esta funcion salga de la pila, significa que se termino la ejecucion del programa principal. Pero, veamos un ejemplo concreto de todo lo que estamos analizando.</p>
-                        <img src="./imagenes/Javascript/Call Stack Code.png" alt="Call Stack Code" loading="lazy">
+                        <img src="../imagenes/Javascript/Call Stack Code.png" alt="Call Stack Code" loading="lazy">
                         <p>Aqui en este codigo, podemos ver como una primera funcion, esta anidada a una segunda funcion, y a su vez est&aacute; a una tercera. Este ejemplo nos sirve para poder ver el call stack en accion. Y tambien contamos con una herramienta en los navegadores que nos permite ver el proceso que realiza el call Stack. Es por eso que al ejecutar este codigo, tambien puedes abrir la consola de desarrollo (F12), ir a Sources y luego a Page. Alli buscaras tu archivo con la extension .js. En mi caso callstack.js.</p>
-                        <img src="./imagenes/Javascript/Call Stack Sources.png" alt="Call Stack Sources" loading="lazy">
+                        <img src="../imagenes/Javascript/Call Stack Sources.png" alt="Call Stack Sources" loading="lazy">
                         <p>Una vez que seleccionemos el archivo podremos ver nuestro codigo. Y loq eu vamos a hacer en el, es colocar un breakpoint en el ultimo return (En mi caso linea 10). Y ejecutamos el codigo. </p>
-                        <img src="./imagenes/Javascript/Call Stack Sources Code.png" alt="Call Stack Sources Code" loading="lazy">
+                        <img src="../imagenes/Javascript/Call Stack Sources Code.png" alt="Call Stack Sources Code" loading="lazy">
                         <p>En esta imagen, podemos ver al Call Stack en accion. Aqui podemos ver el orden de ejecucion de nuestro archivo. Este apila las referencia de ejecucion de las funciones de la mas "antigua" hasta la mas "reciente". Y para el Call Stack, es de vital importancia ejecuctar la ultima tarea. De lo contrario no podra seguir con la ejecucion. En el caso de la imagen, la referencia de la "terceraFuncion" es tan importante, que la necesita ejecutar lo antes posible.</p>
                         <p>Asi es como funciona el Call Stack o la Pila de Ejecucion. Espero haber sido claro con las explicaciones y que se haya comprendido los conceptos principales. </p>
                     </main>
