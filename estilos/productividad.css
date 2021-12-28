@@ -1,0 +1,29 @@
+.article-section{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.article-title{
+    margin-bottom: 3rem;
+    font-weight: 900;
+    position: relative;
+    font-size: var(--h2-font-size);
+    color: var(--dark-color);
+    text-align: center;
+    border-bottom: 2px solid var(--first-color); ;
+}
+
+.paragraph{
+    margin: 30px auto;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.container-image{
+    margin: 30px auto;
+}
+
+.container-image img{
+    margin: 0 auto;
+    width: 50%;
+}
