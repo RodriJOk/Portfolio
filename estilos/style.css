@@ -402,9 +402,10 @@ img{
     margin: 15px auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     color: #1c2c3d;
+    padding: 0px 20px;
 }
 
 

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+        <link href="../estilos/style.css" rel="stylesheet">
+        <link href="./estilos/productividad.css" rel="stylesheet">
+        <title>Alan Rodrigo Juarez</title>
+    </head>
+<body>
+    <header class="header">
+        <nav class="header-nav bd-grid">
+            <div class="header-nav__logo">
+                <a href="index.html" class="logo">Alan Rodrigo Juarez</a>
+            </div>
+
+            <div class="header-nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">Sobre mi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">Contacto</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link active">Articulos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+
+        <section class="home-article">
+            <h1 class="home-article__title"><i><span>Bienvenido a la seccion de acticulos !</span></i><span> 👋🤓📚 </span></h1>
+            <!-- <div class="home_mini_container">
+                <div class="home__scroll">
+                    <a href="#" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                </div>
+                <div class="home_mini_text">
+                    <p>Aqui encontraras mucha info sobre programacion, desarrollo Web, y en especial info sobre Javascript y todo su ecosistema. Pero en este caso particular nos centraremos en Javascript.</p>
+                </div>    
+            </div> -->
+        </section>
+
+        <section class="article-section">
+            <h2 class="article-title">Y vos, ¿le estas sacando provecho a Console?</h2>
+
+            <p class="paragraph">
+                Para los desarrolladores es de mucha utilidad poder saber con exactitud el flujo que está tomando el código que estamos desarrollando, así como también el valor que tiene una variable, el valor de un tipo de dato, etc. Es por eso que constantemente utilizamos herramientas que nos permitan hacer posible todo lo anterior. En este caso, y a lo largo de todo este artículo, vamos a estar haciendo referencia a el objeto de JavaScript llamado Console, y vamos a ver con algunos ejemplos, como sacarle el máximo provecho. 
+            </p>
+
+            <p class="paragraph">
+                Para comenzar, podemos hablar de Console. Console es un objeto propio del lenguaje Javascript. Esto significa que ya está establecido por defecto en el lenguaje, lo que nos permite poder utilizarlo, sin configurar nada con anterioridad. Lo que nos resta es solamente utilizarlo. 
+Como es propio de cada Objeto, contamos con muchos métodos para su uso. El objetivo por el cual, los desarrolladores utilizan este objeto, es que nos permite acceder a la consola de depuración de los navegadores. Si bien en este artículo, hablaremos de algunos de ellos, si quieres conocer mas detalles de todos los métodos del objeto Console, puedes visitar la documentación oficial: https://developer.mozilla.org/es/docs/Web/API/Console
+            </p>
+            
+            <h3 class="subtitle">Personaliza tus console.logs</h3>
+
+            <p class="paragraph">
+                Uno de los métodos más utilizados con Console, es log(). Pero, ¿sabias que puedes personalizar tus logs? 
+¡Si! ¡Y es muy fácil! Solo debes agregar el símbolo (%c) al comienzo del mensaje que desees mostrar en la Consola de Desarrollo, y como segundo parámetro del Console, debes agregarle los estilos, como si fuera un elemento en CSS. Aquí un ejemplo 
+            </p>
+
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Log.png" alt="log" class="image" loading="lazy">
+            </figure>
+
+            <p class="paragraph">
+                Si ejecutas este codigo, vera en la pestaña Consola, de tu navegador, lo siguiente:     
+            </p>
+
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Log_consola.png" alt="Log_consola" class="image" loading="lazy">
+            </figure>
+
+            <h3 class="subtitle">Datos mas visuales. </h3>
+
+            <p class="paragraph">
+                En muchos casos, necesitamos ver un listado de grandes volúmenes de información, y muchas veces pasamos tiempo, buscando entre ellos, uno en particular. Si esta es tu situación, el método .table(), te será de mucha ayuda. Este método, te ayudara a ordenar matrices u objetos de una forma mas prolija, y visualmente más entendible. 
+Si quieres mostrar contenido que tienes en un objeto, en forma de tabla, console.table puede serte de mucha ayuda. Aquí un ejemplo: 
+            </p>
+            
+            <figure class="container-image">
+                <img style="width: 70%;" src="./imagenes/Articulos/Console/Table.png" alt="Table" class="image" loading="lazy">
+            </figure>
+
+            <p class="paragraph">
+                El resultado en consola, será el siguiente
+            </p>
+
+            <figure class="container-image">
+                <img style="width: 70%;" src="./imagenes/Articulos/Console/Table_consola.png" alt="Table_consola" class="image" loading="lazy">
+            </figure>
+
+            <h3 class="subtitle">Métodos para cada situación.</h3>
+            <p class="paragraph">
+                Como hemos visto anteriormente, podemos personalizar nuestros mensajes por consola. Esto es muy útil, pero si queremos que nuestros mensajes, tomen ciertos estilos, según el tipo de mensaje, podría ser algo tedioso. En esos casos, nos puede ser de mucha ayuda, usar métodos según cada situación. Pero no todo es color de rosas. Algo que debemos de tener en cuenta, es que podrían no llegar a tener soporte en algunos navegadores, o los estilos predefinidos, podrían variar entre uno u otro. Veamos los siguientes métodos:
+            </p>
+            <ul style="list-style:disc; margin: 0px 0px 20px 30px; ">
+                <li><p>Metodo .warn()</p></li>
+                <li><p>Metodo .error()</p></li>
+                <li><p>Metodo .info()</p></li>
+            </ul>
+
+            <h3 class="subtitle">Metodo .warn()</h3>
+
+            <p class="paragraph">
+                Este método, imprime un mensaje en la Consola, pero con estilos de advertencia predefinidos.
+            </p>
+
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Warn.png" alt="Warn" class="image" loading="lazy">
+            </figure>
+
+            <p class="paragraph">
+                Por consola, veras algo así:
+            </p>
+
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Warn_consola.png" alt="Warn" class="image" loading="lazy">
+            </figure>
+
+            <h3 class="subtitle">Metodo .error()</h3>
+
+            <p class="paragraph">
+                Este método, imprime un mensaje en la Consola, pero con estilos de error definidos.
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Error.png" alt="Error" class="image" loading="lazy">
+            </figure>
+
+            <p class="paragraph">
+                Por Consola, veras algo así:
+            </p>
+
+            <figure class="container-image">
+                 <img src="./imagenes/Articulos/Console/Error_consola.png" alt="Error" class="image" loading="lazy">
+            </figure>
+
+            <h3 class="subtitle">Metodo .info()</h3>
+
+            <p class="paragraph">
+                Este método, imprime un mensaje en la Consola, pero con estilos de información definidos.    
+            </p>    
+
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Info.png" alt="Info" class="image" loading="lazy">
+           </figure>
+
+           <p class="paragraph">
+                Por Consola, veras algo así:
+           </p>
+
+           <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Info_consola.png" alt="Info_consola" class="image" loading="lazy">
+            </figure>
+
+            <h3 class="subtitle">Cronometra el tiempo de ejecución</h3>
+
+            <p class="paragraph">
+                Si necesitas saber cuánto tiempo tarda en ejecutarse una función, o cierta operación en particular, el método .time, viene en tu ayuda. Cuando ejecutamos el método .time(), se inicia un temporizador, el cual se detiene cuando encuentra el método .timeEnd() con el mismo nombre. ¡Si, dijimos nombre! Y es que ambos métodos, deben recibir un label (o nombre) como identificador. De esa manera, podremos iniciar y finalizar el temporizador en nuestra ejecución. Algo que es importante tener en cuenta, es que tiempo de la operación, será un resultado expresado en milisegundos. Veamos un ejemplo, para entenderlo mejor.
+            </p>
+
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Time.png" alt="Time" class="image" loading="lazy">
+            </figure>
+
+            <p class="paragraph">
+                Lo que aparecerá por consola, será lo siguiente:
+            </p>
+
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Time_consola.png" alt="Time_consola" class="image" loading="lazy">
+            </figure>
+
+            <h3 class="subtitle">Seguimiento del Stack</h3>
+
+            <p class="paragraph">
+                Si por algún motivo, necesitas consultar la Pila de llamadas (Call Stack), te puede ser de mucha ayuda utilizar el método .trace(). Si no estas familiarizado con el concepto de Call Stack, puedes visitar la documentación oficial: https://developer.mozilla.org/es/docs/Glossary/Call_stack 
+                Veamos un ejemplo para ver cómo funciona. 
+            </p>
+
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Trice.png" alt="Trice" class="image" loading="lazy">
+            </figure>
+
+            <p class="paragraph">El método .trace() nos devolverá lo siguiente:</p>
+
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Console/Time_consola.png" alt="Trice" class="image" loading="lazy">
+            </figure>
+
+            <p class="paragraph">
+                Como hemos visto hasta aquí, los métodos de Console, son variados, y podremos usar cada uno de ellos, según en el contexto en el que nos encontremos. Lo importante entonces, es saber identificar esas situaciones para poder escoger el mejor. 
+            </p>
+
+            <p class="paragraph">
+                Te agradezco mucho si has llegado hasta aquí. Espero que este artículo, te haya sido de mucha ayuda. Te deseo un gran Happy Coding.
+            </p>
+        </section>
+
+    </main>
+
+
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">ALAN RODRIGO JUAREZ</h2>
+                <p class="footer__text">Espero que hayas disfrutado mi website. Si deseas compartir tu feedback, no dudes en contactarme.</p>
+            </div>
+
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">About</a></li>
+                    <li><a href="#skills" class="footer__link">Skills</a></li>
+                    <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="#Contact" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <a href="https://www.linkedin.com/in/rodrijuarez/" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/RodriJOk" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.instagram.com/preguntastech" class="about__social-icon"><i class='bx bxl-instagram' ></i></a>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <script src="../javascript.js"></script>
+
+</body>
+</html>
