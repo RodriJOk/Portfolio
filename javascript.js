@@ -142,7 +142,7 @@ const sections = document.querySelectorAll('section[id]')
 window.addEventListener('scroll', scrollActive)
 
 function scrollActive(){
-    const scrollY = window.pageYOffset
+    const scrollY = window.pageYOffset;
 
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
@@ -191,5 +191,8 @@ sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
 
-/* NPM section -> Temario */
 
+/*SCROLL PORTFOLIO*/
+sr.reveal('.portfolio__container', {})
+sr.reveal('.portfolio__img', {interval: 200})
+sr.reveal('.portfolio__link', {delay: 200})
