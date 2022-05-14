@@ -36,9 +36,9 @@
                     <li class="nav__item">
                         <a href="index.html#contact" class="nav__link">Contacto</a>
                     </li>
-                    <li class="nav__item">
+                    <!-- <li class="nav__item">
                         <a href="index.html#blog" class="nav__link">Blog</a>
-                    </li>
+                    </li> -->
                     <li class="nav__item">
                         <a href="index.html#blog" class="nav__link active">Articulos</a>
                     </li>
@@ -70,17 +70,17 @@
             <h2 class="article-title">Y vos, ¿le estas sacando provecho a Console?</h2>
 
             <p class="paragraph">
-                Para los desarrolladores es de mucha utilidad poder saber con exactitud el flujo que está tomando nuestro código, o, así como también diferentes valores, como el de una una variable, un tipo de dato, etc. Es por eso que constantemente utilizamos herramientas que nos permitan hacer posible todo lo anterior. En este caso, y a lo largo de todo este artículo, vamos a estar haciendo referencia a el objeto de JavaScript llamado Console, y vamos a ver con algunos ejemplos, como sacarle el máximo provecho.  
+                Para los desarrolladores es de mucha utilidad poder saber con exactitud el flujo que está tomando nuestro código, o, así como también diferentes valores, como el de una una variable, un tipo de dato, etc. Es por eso que constantemente utilizamos herramientas que nos permitan hacer posible todo lo anterior. En este caso, y a lo largo de todo este artículo, vamos a estar haciendo referencia a el <span class="bold">objeto de JavaScript llamado Console</span> , y vamos a ver con algunos ejemplos, como sacarle el máximo provecho.  
             </p>
 
             <p class="paragraph">
-                Para comenzar, podemos hablar de Console. Console es un objeto propio del lenguaje Javascript. Esto significa que ya está establecido por defecto en el lenguaje, lo que nos permite poder utilizarlo, sin configurar nada con anterioridad. Lo que nos resta es solamente utilizarlo. Como es propio de cada Objeto, contamos con muchos métodos para su uso. Sin dudas, el objetivo por el cual querras usar Console es: acceder a la consola de depuración de los navegadores. Si bien en este artículo, hablaremos de algunos de ellos, si quieres conocer más detalles de todos los métodos del objeto Console, puedes visitar la <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/API/Console">documentación oficial</a>
+                Para comenzar, podemos hablar de Console. Console es un objeto propio del lenguaje Javascript. Esto significa que ya está establecido por defecto en el lenguaje, lo que nos permite poder utilizarlo, sin configurar nada con anterioridad. Lo que nos resta es solamente utilizarlo. Como es propio de cada Objeto, contamos con muchos métodos para su uso. Sin dudas, el objetivo por el cual querras usar Console es: <span class="bold">acceder a la consola de depuración de los navegadores</span>. Si bien en este artículo, hablaremos de algunos de ellos, si quieres conocer más detalles de todos los métodos del objeto Console, puedes visitar la <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/API/Console">documentación oficial.</a>
             </p>
             
-            <h3 class="section-title">Personaliza tus console.logs</h3>
+            <h3 class="section-title">Personaliza tus logs.</h3>
 
             <p class="paragraph">
-                Uno de los métodos más utilizados con Console, es log(). Pero, ¿sabías que puedes personalizar tus logs? ¡Si! ¡Y es muy fácil! Solo debes agregar el símbolo (%c) al comienzo del mensaje que desees mostrar, y como segundo parámetro, debes agregarle los estilos, como si fuera un elemento en CSS. Aquí un ejemplo 
+                Uno de los métodos más utilizados con Console, es log(). Pero, ¿sabías que puedes personalizar tus logs? ¡Si! ¡Y es muy fácil! Solo debes agregar el símbolo (%c) al comienzo del mensaje que desees mostrar, y como segundo parámetro, debes agregarle los estilos, como lo harías con CSS. Aquí un ejemplo 
             </p>
 
             <figure class="container-image">
@@ -98,7 +98,7 @@
             <h3 class="section-title">Datos mas visuales. </h3>
 
             <p class="paragraph">
-                En muchos casos, necesitamos ver un listado de grandes volúmenes de información, y muchas veces pasamos tiempo, buscando entre ellos uno en particular. Si esta es tu situación, el método .table(), te será de mucha ayuda. Este método, te ayudara a ordenar matrices u objetos de una forma más prolija, y visualmente más entendible. Si quieres mostrar contenido que tienes en un objeto, en forma de tabla, console.table puede serte de mucha ayuda. Aquí un ejemplo: 
+                En muchos casos, necesitamos ver un listado de grandes volúmenes de información, y muchas veces pasamos tiempo, buscando entre ellos uno en particular. Si esta es tu situación, el método .table(), te será de mucha ayuda. Este método, te ayudara a ordenar matrices u objetos de una forma más prolija, y visualmente más entendible. Aquí un ejemplo: 
             </p>
             
             <figure class="container-image">
@@ -115,7 +115,7 @@
 
             <h3 class="section-title">Métodos para cada situación.</h3>
             <p class="paragraph">
-                Como hemos visto anteriormente, podemos personalizar nuestros mensajes por consola. Esto es muy útil, pero si queremos que nuestros mensajes, tomen ciertos estilos, según el tipo de mensaje, podría ser algo tedioso. En esos casos, nos puede ser de mucha ayuda, usar métodos según cada situación. Pero no todo es color de rosas. Algo que debemos de tener en cuenta, es que podrían no llegar a tener soporte en algunos navegadores, o los estilos predefinidos, podrían variar entre uno u otro. Veamos los siguientes métodos:
+                Como hemos visto anteriormente, podemos personalizar nuestros mensajes por consola. Esto es muy útil, pero si queremos que nuestros mensajes, tomen ciertos estilos, según el tipo de mensaje, podría ser algo tedioso. En esos casos, nos puede ser de mucha ayuda, usar métodos según cada situación. ¡ Pero no todo es color de rosas ! 😭. Algo que debemos de tener en cuenta, es que podrían no llegar a tener soporte en algunos navegadores, o los estilos predefinidos podrían variar entre uno u otro. Veamos los siguientes métodos:
             </p>
             <ul style="list-style:disc; margin: 0px 0px 20px 30px; ">
                 <li><p>Metodo .warn()</p></li>
@@ -144,7 +144,7 @@
             <h3 class="section-title">Metodo .error()</h3>
 
             <p class="paragraph">
-                Este método, imprime un mensaje en la Consola, pero con estilos de error definidos.
+                Este método, imprime un mensaje en la Consola, pero con estilos de error predefinidos.
             </p>
             <figure class="container-image">
                 <img src="./imagenes/Articulos/Console/Error.png" alt="Error" class="image" loading="lazy">

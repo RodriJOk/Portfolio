@@ -370,19 +370,18 @@ img{
 /*===== CONTACT =====*/
 
 .contacto__rodrigo{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+    text-align: center;
 }
 
 .contacto__rodrigo a{
+    margin: 0 auto;
+    align-items: center;
     background-color: var(--first-color);
     color: var(--white-color);
     border-radius: 25px;
-    height: 1.7rem;
+    height: 4rem;
     width: 45%;
     border: none;
-    text-align: center;
     display: flex;
     justify-content: center;
 }
@@ -392,8 +391,13 @@ img{
 }
 
 /*===== ARTICLES =====*/
+.section-articles{
+    padding-bottom: 2rem;
+}
+
 .personal-articles{
     text-align: center;
+    margin: 20px 0px;
 }
 
 .personal-articles_single{
@@ -520,6 +524,23 @@ img{
         line-height: 1.2rem;
         font-size: 1rem;
     }
+
+    /* ARTICULOS */
+
+    .personal-articles{
+        margin: 10px 0px;
+    }
+    
+    .personal-articles_single{
+        justify-content: space-between;
+        width: 95%;
+        margin: 0 auto;
+        margin: 20px 0px;
+    }
+
+    .personal-articles_single h2{
+        text-align: left;
+    }
 }
 
 /*===== MEDIA QUERIES DESKTOP=====*/
@@ -635,10 +656,13 @@ img{
         width: 20%;
         border: none;
         text-align: center;
-        padding-top: 17px;
         display: flex;
         justify-content: center;
         font-weight: 600;
+    }
+
+    .contacto__parrafo i{
+        padding-left: 15px;
     }
 
     .footer__container{
