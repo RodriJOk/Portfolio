@@ -190,6 +190,6 @@ sr.reveal('.contact__button', {delay: 600})
 
 
 /*SCROLL PORTFOLIO*/
-sr.reveal('.portfolio__container', {distance: '50px', interval: 500, delay: 300})
-sr.reveal('.portfolio__img', {interval: 200})
-sr.reveal('.portfolio__link', {delay: 200})
+sr.reveal('.portfolio__container', {distance: '10px', interval: 500, delay: 300})
+sr.reveal('.portfolio__img', {distance: '10px', interval: 100})
+sr.reveal('.portfolio__link', {distance: '10px', interval: 100})
