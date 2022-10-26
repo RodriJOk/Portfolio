@@ -351,8 +351,11 @@ img{
     height: 100%;
     display:flex;
     justify-content: center;
+    gap: 20px;
     align-items: center;
-    background-color: rgba(255,255, 255, .3);
+    /* background-color: rgba(255,255, 255, .3); */
+    background-color: #252d366f;
+    /* background-color: black; */
     backdrop-filter: blur(10px);
     border-radius: .5rem;
     cursor: pointer;
@@ -365,8 +368,14 @@ img{
 }
 
 .portfolio__link-name{
-    color: var(--dark-color);
+    color: #ccc;
+    /* color: white; */
 }
+
+.portfolio__link-name:hover{
+    color: white;
+}
+
 /*===== CONTACT =====*/
 
 .contacto__rodrigo{

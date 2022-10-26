@@ -26,9 +26,11 @@ class TextTyper {
       if (this.stopAnimation) return resolve();
 
       setTimeout( () => {
-        this.container.innerText += char;
-        this.stopCursorBlinking();
-        resolve();
+        if(this.container != null) {
+          this.container.innerText += char;
+          this.stopCursorBlinking();
+          resolve();
+        }
       }, this.getRandomTimeout());
     }));
     return this;
@@ -121,7 +123,6 @@ const showMenu = (toggleId, navId) =>{
     if(toggle && nav){
         toggle.addEventListener('click', ()=>{
             nav.classList.toggle('show')
-            console.log("Estas dentro")
         })
     }
 }
@@ -190,6 +191,9 @@ sr.reveal('.contact__button', {delay: 600})
 
 
 /*SCROLL PORTFOLIO*/
-sr.reveal('.portfolio__container', {distance: '10px', interval: 500, delay: 300})
-sr.reveal('.portfolio__img', {distance: '10px', interval: 100})
-sr.reveal('.portfolio__link', {distance: '10px', interval: 100})
+// sr.reveal('.portfolio__container', {distance: '10px', interval: 500, delay: 300})
+// sr.reveal('.portfolio__container', {distance: '100px', interval: 500, delay: 300})
+// sr.reveal('.portfolio__img', {distance: '10px', interval: 100})
+// sr.reveal('.portfolio__img', {distance: '100px', interval: 100})
+// sr.reveal('.portfolio__link', {distance: '10px', interval: 100})
+// sr.reveal('.portfolio__link', {distance: '100px', interval: 100})
