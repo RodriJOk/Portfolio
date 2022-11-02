@@ -174,13 +174,10 @@ img{
     align-self: flex-start;
     text-align: center;
     line-height: 1.2;
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
-
-.home__title span{
-    font-weight: 100;
-    font-size: 85px;
+    padding: 50px 20px;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 4rem;
     text-shadow: 0 20px 25px rgba(0,0, 0, .5);
 }
 
@@ -296,9 +293,13 @@ img{
 
 .skills__container{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     font-weight: var(--font-big);
+    align-items: initial;
     color: var(--black-color);
+    gap: 41px;
+    text-align: center;
 }
 
 .skill_box{
@@ -322,7 +323,8 @@ img{
 }
 .skills__img{
     border-radius: .5rem;
-    width: 40%;
+    width: 90%;
+    margin: 0 auto;
 }
 /*===== PORTFOLIO =====*/
 
@@ -393,12 +395,8 @@ img{
     border: none;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
-
-.contacto__parrafo{
-    padding-left: 20px;
-}
-
 /*===== ARTICLES =====*/
 .section-articles{
     padding-bottom: 2rem;
@@ -505,14 +503,11 @@ img{
         height: 325px;
         text-align: center;
         align-self: center;
-    }
-
-    .home__title span{
-        font-weight: 100;
+        font-weight: 800;
         font-size: 4rem;
+        padding: 50px 20px;
         text-shadow: 0 20px 25px rgba(0,0, 0, .5);
     }
-
     .home_mini_container{
         display: flex;
         flex-direction: row;
@@ -612,10 +607,6 @@ img{
     .home{
         height: 650px;
     }
-
-    .home__title{
-        font-size: 3rem;
-    }
     .about__container{
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -633,8 +624,12 @@ img{
     }
     
     .skills__container{
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
+    }
+    .skills__img{
+        width: 100%;
     }
 
     .portfolio__container{
@@ -668,10 +663,6 @@ img{
         display: flex;
         justify-content: center;
         font-weight: 600;
-    }
-
-    .contacto__parrafo i{
-        padding-left: 15px;
     }
 
     .footer__container{

@@ -5,26 +5,20 @@
     width: 100%;
     color: var(--white-color);
 }
-
 .home-article__title{
     align-self: flex-start;
     text-align: center;
     line-height: 1.2;
     padding-bottom: 50px;
     padding-top: 50px;
-}
-
-.home-article__title span{
     font-weight: 100;
     font-size: 50px;
     text-shadow: 0 20px 25px rgba(0,0, 0, .5);
 }
-
 .article-section{
     width: 70%;
     margin: 0 auto;
 }
-
 .article-title{
     margin-bottom: 3rem;
     font-weight: 900;
@@ -34,7 +28,6 @@
     text-align: center;
     border-bottom: 2px solid var(--first-color); ;
 }
-
 .paragraph{
     margin: 30px auto;
     font-size: 20px;
@@ -44,12 +37,10 @@
     font-size: 1.33rem;
     line-height: 150%;
 }
-
 .paragraph .emoji{
     font-weight: 100;
     font-size: 20px;
 }
-
 .paragraph .bold{
     font-weight: 900;
     color: black;
