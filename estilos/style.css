@@ -409,9 +409,9 @@ img{
 
 .personal-articles_single{
     border-radius: 5rem;
-    width: 85%;
+    width: 100%;
     border: solid 1px var(--gray-color);
-    margin: 15px auto;
+    margin: 7px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

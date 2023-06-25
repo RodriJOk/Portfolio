@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="../estilos/style.css" rel="stylesheet">
+        <link href="../estilos/metodos_arrays.css" rel="stylesheet">
+        <!-- <link href="./estilos/productividad.css" rel="stylesheet"> -->
+        <title>Alan Rodrigo Juarez</title>
+    </head>
+<body>
+    <header class="header">
+        <nav class="header-nav bd-grid">
+            <div class="header-nav__logo">
+                <a href="index.html" class="logo">Alan Rodrigo Juarez</a>
+            </div>
+
+            <div class="header-nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">Sobre mi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">Contacto</a>
+                    </li>
+                    <!-- <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link">Blog</a>
+                    </li> -->
+                    <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link active">Articulos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+
+        <section class="home-article">
+            <h1 class="home-article__title">Seccion de articulos ! <br>👋🤓📚 </h1>
+            <!-- <div class="home_mini_container">
+                <div class="home__scroll">
+                    <a href="#" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                </div>
+                <div class="home_mini_text">
+                    <p>Aqui encontraras mucha info sobre programacion, desarrollo Web, y en especial info sobre Javascript y todo su ecosistema. Pero en este caso particular nos centraremos en Javascript.</p>
+                </div>    
+            </div> -->
+        </section>
+
+        <section class="article-section">
+            <h2 class="article-title">Métodos de arrays que debes conocer</h2>
+            <p class="paragraph">
+                A menudo, necesitamos utilizar una colección ordenada que nos permita almacenar una serie de datos, y que también nos permite manejar sus posiciones de manera secuencial, por lo cual tendremos un 1ero, un 2do, o 3ero, y así sucesivamente. Es por eso que en programación, utilizamos en nuestro dia a dia los Arrays (Arreglos) que nos permiten almacenar datos como elementos y regresarlo cuando los necesitemos.
+            </p>
+            <p class="paragraph">
+                En Javascript, los arreglos pueden ser una colección de elementos de diferentes tipos. Esto significa que podemos tener un arreglo de diferentes tipos, como String (Cadena), Number (Numérico), Booleano, Objetos, e inclusive otros arreglos. Recordemos que los arrays tienen determinadas posiciones para almacenar sus datos, y si queremos acceder a alguno en particular, simplemente debemos hacer referencia a esa posición en memoria.
+            </p>
+            <p class="paragraph">
+                En este artículo estaremos hablando un poco más sobre los arrays, y qué métodos necesitas tenerlos presentes para facilitar su manipulación.
+            </p>
+            <h3 class="section-title">Some()</h3>
+            <p class="paragraph">
+                El método some() retorna un valor (booleano) true en el caso de que se compruebe de que al menos un elemento del array cumpla con la condición que hayamos ingresado. En el caso de que ninguno de los elementos cumpla con la condición, nos retornara el valor (booleano) false. 
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/some.png" alt="Metodo some()" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">Every()</h3>
+            <p class="paragraph">
+                El método every, es muy similar al método some(), que mencionamos anteriormente. Este metodo tambien nos devuelve un valor booleano (true|false) dependiendo si todos los elementos del array cumple con la condición ingresada. Veamos un ejemplo: 
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/every.png" alt="Every method example" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">Find()</h3>   
+            <p class="paragraph">
+                El metodo find(), como su nombre indica, es un metodo que busca la primera coincidencia de determinado valor o condicion. Algo importante por mencionar es que este metodo va a retornar el primer elemento que cumpla con dicha condicion, y dejara de iterar nuestro array. En el caso de que no encuentre ningun elemento que cumpla con dicha condicion, nos retornara “undefined”
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/find.png" alt="Find method example" class="image" loading="lazy">
+            </figure>
+
+            <h3 class="section-title">Filter()</h3>
+            <p class="paragraph">El método filter(), se encarga de buscar uno o varios elementos de nuestro array que cumpla con determinada condición, y los devuelve en un nuevo array. Una de las diferencia que podemos notar entre find() y filter(), es que este último nos retornara en un nuevo array todos los elementos que cumplan con cierta condición, a diferencia con el método find(), que solo buscará el primer elemento que cumpla con la condición, y lo retornara.</p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/filter.png" alt="Filter method example" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">Map()</h3>
+            <p class="paragraph">
+                El método map() es uno de los métodos más conocidos y utilizados al trabajar con arrays. Fue incorporado en el lanzamiento de ES6 (ECMAScript 2015) y nos permite acceder y realizar diferentes acciones con cada uno de los elementos de un array. Al aplicar el método map() a un array, se crea y retorna un nuevo array resultante con la misma longitud que el original. Cada elemento del nuevo array es el resultado de aplicar una función dada a cada elemento correspondiente del array original, manteniendo así el orden de los elementos.
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/map.png" alt="Map method example" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">Concat()</h3>
+            <p class="paragraph">
+                El método concat() nos permite combinar dos o más arrays. Es importante destacar que este método no modifica el array original, sino que devuelve un nuevo array que contiene el resultado de la unión de los arrays.
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/concat.png" alt="Concat method example" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">Join()</h3>
+            <p class="paragraph">
+                El método join() nos permite concatenar y convertir todos los elementos de un array en una cadena de texto, separándolos con el separador que hayamos definido como parámetro.
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/join.png" alt="Join method example" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">Fill()</h3>
+            <p class="paragraph">
+                El método fill() se utiliza para rellenar un array o una porción específica del mismo con un valor determinado. Es importante destacar que este método modifica el array original. El método fill() acepta como parámetro el valor con el que se desea rellenar el array. Además, se pueden especificar opcionalmente los índices de inicio y fin para limitar la porción del array que se va a modificar. Si no se proporcionan los parámetros de inicio y fin, todo el array se llenará con el valor especificado como primer parámetro.
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/fill.png" alt="Fill method example" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">Push() y Pop()</h3>
+            <p class="paragraph">Los métodos push() y pop() tienen como propósito agregar o eliminar uno o más elementos en la última posición de un array específico. Estos métodos se utilizan para modificar el array original, y al usarlos, obtendremos un nuevo array reflejando las modificaciones realizadas.
+
+                El método push() se utiliza para agregar elementos al final del array y devuelve la nueva longitud del array después de agregar los elementos. Por otro lado, el método pop() se utiliza para eliminar el último elemento del array y devuelve el elemento eliminado.</p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/push_pop.png" alt="Fill method example" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">Shift() y Unshift()</h3>
+            <p class="paragraph">Los métodos shift() y unshift() se utilizan para agregar o eliminar elementos al principio de un array determinado. Al utilizar estos métodos, se obtiene un nuevo array con las modificaciones correspondientes.
+
+                El método shift() se utiliza para eliminar el elemento en la posición 0 de un array determinado y devuelve el valor eliminado. Después de eliminar el primer elemento, los elementos restantes se desplazan hacia abajo para llenar el espacio vacío.
+                
+                Por otro lado, el método unshift() se utiliza para agregar uno o más elementos al principio de un array determinado. Este método devuelve la nueva longitud del array después de la adición de elementos.
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/shift_unshift.png" alt="Shift and Unshift method example" class="image" loading="lazy">
+            </figure>
+
+            <h3 class="section-title">Reduce()</h3>
+            <p class="paragraph">
+                Este metodo itera sobre un determinado array y, como su nombre lo indica, reduce sus elementos en un único valor. 
+                Recibe dos parámetros: una función reducer y un valor inicial para el acumulador. 
+                El reducer define cómo se realiza la combinación y toma dos argumentos: el acumulador y el elemento actual del array. 
+                Al finalizar, reduce() devuelve el valor combinado final. 
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Arrays_que_debes_conocer/reduce.png" alt="Reduce method example" class="image" loading="lazy">
+            </figure>
+
+            <p>
+                En este artículo, hemos hablado de algunos de los métodos de array de los cuales disponemos en Javascript para poder realizar diferentes acciones en cuanto a arrays se trata. Por supuesto, contamos con mucho mas, y es muy interesante que puedan conocer más acerca de ellos. El tenerlos presentes, tanto su sintaxis como su funcionamiento te ayudará a resolver diversos problemas que se te presenten, de una forma más rápida y prolija.
+                Gracias por leerme hasta acá. Espero que esta info te haya sido de ayuda.
+            </p>
+        </section>
+    </main>
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">ALAN RODRIGO JUAREZ</h2>
+                <p class="footer__text">Espero que hayas disfrutado mi website. Si deseas compartir tu feedback, no dudes en contactarme.</p>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="index.html#home" class="footer__link">Home</a></li>
+                    <li><a href="index.html#about" class="footer__link">Sobre mi</a></li>
+                    <li><a href="index.html#skills" class="footer__link">Skills</a></li>
+                    <li><a href="index.html#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Contacto</a></li>
+                    <li><a href="index.html#articles" class="footer__link">Articulos</a></li>
+                </ul>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <a href="https://www.linkedin.com/in/rodrijuarez/" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/RodriJOk" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.instagram.com/preguntastech" class="about__social-icon"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../javascript.js"></script>
+</body>
+</html>
