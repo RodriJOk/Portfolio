@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="../estilos/style.css" rel="stylesheet">
+        <link href="../estilos/metodos_arrays.css" rel="stylesheet">
+        <title>Alan Rodrigo Juarez</title>
+    </head>
+<body>
+    <header class="header">
+        <nav class="header-nav bd-grid">
+            <div class="header-nav__logo">
+                <a href="index.html" class="logo">Alan Rodrigo Juarez</a>
+            </div>
+
+            <div class="header-nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">Sobre mi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">Contacto</a>
+                    </li>
+                    <!-- <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link">Blog</a>
+                    </li> -->
+                    <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link active">Articulos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+
+        <section class="home-article">
+            <h1 class="home-article__title">Seccion de articulos ! <br>👋🤓📚 </h1>
+            <!-- <div class="home_mini_container">
+                <div class="home__scroll">
+                    <a href="#" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                </div>
+                <div class="home_mini_text">
+                    <p>Aqui encontraras mucha info sobre programacion, desarrollo Web, y en especial info sobre Javascript y todo su ecosistema. Pero en este caso particular nos centraremos en Javascript.</p>
+                </div>    
+            </div> -->
+        </section>
+
+        <section class="article-section">
+            <h2 class="article-title">JS: Nuevo métodos de arrays que debes conocer</h2>
+            <p class="paragraph">
+                Algo que sin dudas podemos concluir es que JavaScript, como lenguaje, ha contado con constantes actualizaciones, especialmente en los últimos años. Y esto es algo, que como desarrolladores, celebramos, y mucho, ya que JavaScript como lenguaje tiene un reto muy importante y desafiante. Y es que JavaScript, uno de los lemas que tiene, es justamente no romper la web. Esto es un desafío, que no todos los lenguajes de programación tienen, y justamente este desafío implica evolucionar siendo totalmente retrocompatible con millones y millones de páginas webs, manteniendo un sentido y objetivo claro.
+            </p>
+            <p class="paragraph">
+                A pesar de todo, constantemente contamos con nuevas actualizaciones del lenguaje, y en este artículo queremos hablar específicamente sobre los nuevos métodos de array que contamos: toSorted(), toReduced(), toSpliced() y with(). Unos de los problemas con algunos métodos de Javascript es justamente que realizan una determinada acción sobre un determinado array, pero al efectuarlo, mutaban el array original.
+            </p>
+            <h3 class="section-title">toReversed()</h3>
+            <p class="paragraph">
+                Nos permite invertir el orden de un determinado array, sin mutarlo. Vemos un ejemplo:
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/JS_Nuevos_metodos_de_arrays/toReversed().png" alt="Metodo some()" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">toSorted()</h3>
+            <p class="paragraph">
+                Este método nos permite ordenar un determinado array, sin notarlo. Vemos la comparativa con el método, con el que ya contábamos, sort().
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/JS_Nuevos_metodos_de_arrays/toSorted().png" alt="Every method example" class="image" loading="lazy">
+            </figure>
+            
+            <h3 class="section-title">toSpliced()</h3>   
+            <p class="paragraph">
+                Este método nos permite eliminar o reemplazar elementos de un array. Veamos las diferencia con el método splice() que si muta el array original.
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/JS_Nuevos_metodos_de_arrays/toSpliced().png" alt="Find method example" class="image" loading="lazy">
+            </figure>
+
+            <h3 class="section-title">with()</h3>
+            <p class="paragraph">
+                Este método nos permite cambiar el valor de un elemento del array. Lo interesante de este método es que viene a sustituir la notación de corchetes (”brackets notation”). Veamos codigo:
+            </p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/JS_Nuevos_metodos_de_arrays/with().png" alt="with method example" class="image" loading="lazy">
+            </figure>
+            <p class="paragraph">
+                Sin dudas, los métodos comentados anteriormente, son muy interesantes para poder tenerlos en cuenta al momento de programar. Como son métodos nuevos que se suman al lenguaje, algunos navegadores populares, ya cuentan con soporte en sus últimas versiones, pero en algunos tocará esperar un poco más. De todas formas puedes valerte de esa info en esta página: <a href="https://caniuse.com/" target="_blank">https://caniuse.com/</a> para ver el soporte de los navegadores.
+            </p>
+            <p class="paragraph">
+                Gracias por leerme hasta acá. Espero que esta info te haya sido de ayuda. 😉
+            </p>
+        </section>
+    </main>
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">ALAN RODRIGO JUAREZ</h2>
+                <p class="footer__text">Espero que hayas disfrutado mi website. Si deseas compartir tu feedback, no dudes en contactarme.</p>
+                <h2 class="footer__title">
+                    <a href='https://cafecito.app/rodrijuarez' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_5.png 1x, https://cdn.cafecito.app/imgs/buttons/button_5_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_5_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_5.png' alt='Invitame un café en cafecito.app' /></a>
+                </h2>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="index.html#home" class="footer__link">Home</a></li>
+                    <li><a href="index.html#about" class="footer__link">Sobre mi</a></li>
+                    <li><a href="index.html#skills" class="footer__link">Skills</a></li>
+                    <li><a href="index.html#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Contacto</a></li>
+                    <li><a href="index.html#articles" class="footer__link">Articulos</a></li>
+                </ul>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <a href="https://www.linkedin.com/in/rodrijuarez/" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/RodriJOk" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.instagram.com/preguntastech" class="about__social-icon"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../javascript.js"></script>
+</body>
+</html>
