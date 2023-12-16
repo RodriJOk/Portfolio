@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+        <link href="../estilos/style.css" rel="stylesheet">
+        <link href="./estilos/productividad.css" rel="stylesheet">
+        <title>Alan Rodrigo Juarez</title>
+    </head>
+<body>
+    <header class="header">
+        <nav class="header-nav bd-grid">
+            <div class="header-nav__logo">
+                <a href="index.html" class="logo">Alan Rodrigo Juarez</a>
+            </div>
+
+            <div class="header-nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">Sobre mi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">Contacto</a>
+                    </li>
+                    <!-- <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link">Blog</a>
+                    </li> -->
+                    <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link active">Articulos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="home-article">
+            <h1 class="home-article__title">Seccion de articulos ! <br>👋🤓📚 </h1>
+        </section>
+
+        <section class="article-section">
+            <h2 class="article-title">LastIndexOf(), findLast() y groupBy()</h2>
+
+            <p class="paragraph">
+                JavaScript (JS), como lenguaje de programación, se va a actualizando contantemente, y como desarrolladores queremos estar atentos a esas novedades, que sin dudas, mejoran mucho la experiencia a la hora de programar. ‍‍
+            </p>
+            <p class="paragraph">
+                Alguna de las novedades, ya las comentamos en un articulo reciente, en donde analizábamos, las funcionalidades de nuevos métodos de arrays, como lo son toReversed(), toSorted(), to Spliced(), y with(). Te recomiendo la lectura en este <a href="https://rodrigojuarez.dev/js_nuevos_metodos_de_arrays_que_debes_conocer">enlace</a>.
+            </p>
+            <p class="paragraph">
+                Y a esos métodos de arrays, se le suman nuevos !!! 😱<br>
+                Es por eso, que durante este articulo, vamos a hablar sobre los métodos groupBy(), findLast() y lastIndexOf(). 
+            </p>
+
+            <h3 class="section-title">
+                findLast()
+            </h3>
+
+            <p class="paragraph">
+                Imaginemos que nos encontremos ante una situacion en las que debamos buscar el ultimo elemento de un array, que cumpla con una determinada condición. ¿Cómo podríamos implementar esa lógica? <br>
+                Bueno, se nos podrían ocurrir diferentes formas. Quizás hayas pensado en una solución como esta. 
+            </p>
+            <figure class="container-image">
+                <img src="imagenes/Articulos/findLast, lastIndexOf, groupBy/before_find_last.png" alt="Alternative to using the findLast() method" class="image" loading="lazy" style="width: 100%;">
+            </figure>
+            <p class="paragraph">
+                Un recorrido del array en el sentido inverso con la utilización de un ciclo for. 
+En este caso, si ejecutamos en código, lo que nos retornara sera un array, con la posición del elemento que cumple la condición otorgada, junto con el elemento en si. Lo cual seria correcto ya que las posiciones de los elementos del array comienzan desde el numero 0. <br> Imagen con un grafico mas visual: 
+            </p>
+            <figure class="container-image">
+                <img src="imagenes/Articulos/findLast, lastIndexOf, groupBy/excalidraw_find_last.png" alt="In the image, the positions of the elements of the array from which was taken as an example" class="image" loading="lazy" style="width: 100%;">
+            </figure>
+            <p class="paragraph">
+                Si bien el código es correcto, funciona bien y llegamos a la solución buscada, el método findLast() en estos casos viene en nuestra ayuda, ya que nos facilita todo el proceso de búsqueda del ultimo elemento. Veamos el mismo ejemplo de búsqueda, pero utilizando este nuevo método.     
+            </p>
+            <figure class="container-image">
+                <img src="/imagenes/Articulos/findLast, lastIndexOf, groupBy/find_last.png" alt="Example in the use of the method findLast()" class="image" loading="lazy" style="width: 90%;">
+            </figure>
+            <p class="paragraph">
+                ¿Qué te parece? ¿Mas sencillo? Sin dudas, que si. Por supuesto, como es un nuevo método que se suma al lenguaje, podemos consultar la disponibilidad de uso de los navegadores <a href="https://caniuse.com/?search=findLast">aquí</a>.
+            </p>
+
+            <h3 class="section-title">
+                lastIndexOf()
+            </h3>
+            <p class="paragraph">
+                Este nuevo método es similar al anterior, ya que nos permite obtener el índice de un elemento en un determinado array que cumpla con determinada condición. Veamos un ejemplo practico del mismo. 
+            </p>
+            <figure class="container-image">
+                <img src="/imagenes/Articulos/findLast, lastIndexOf, groupBy/last_index_of.png" alt="Example in the use of the method lastIndexOf()" class="image" loading="lazy" style="width: 90%;">
+            </figure>
+            <p class="paragraph">
+                En este caso, como la condición buscaba el ultimo índice del array que fue igual al string “Ana”, es correcto el retorno de la posición 3. 
+            </p>
+            <figure class="container-image">
+                <img src="/imagenes/Articulos/findLast, lastIndexOf, groupBy/excalidraw_last_index_of.png" alt="Example in the structure of the array" class="image" loading="lazy" style="width: 90%;">
+            </figure>
+            <h3 class="section-title">
+                groupBy()
+            </h3>
+            <p class="paragraph">
+                Si lo que buscamos es filtrar un determinado objeto por algún tipo de propiedad, el método groupBy(), viene a nuestra ayuda. Por que nos permite separar objetos según algún el valor, el tipo o cantidad. 
+                <br>
+                Veamos un ejemplo: 
+            </p>
+            <figure class="container-image">
+                <img src="/imagenes/Articulos/findLast, lastIndexOf, groupBy/object groupBy.png" alt="Example in the use of the method groupBy()" class="image" loading="lazy" style="width: 90%;">
+            </figure>
+            <p class="paragraph">
+                Al igual que los otros métodos, también puedes ver el soporte que le dan los navegadores, haciendo click <a href="https://caniuse.com/mdn-javascript_builtins_object_groupby">aqui</a>
+            </p>
+            <p class="paragraph">
+                Sin dudas, como hemos visto, estos nuevos métodos con los que contamos a partir de ahora nos facilitaran a un mas, la manipulación de las estructuras de datos. Tenerlos en cuenta, nos mejora mucho nuestra experiencia de al programar. 
+            </p>
+            <p class="paragraph">
+                Desde ya muchas gracias por llegar hasta aca.<br> Happy coding !! 👨🏻‍💻👩🏻‍💻
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">ALAN RODRIGO JUAREZ</h2>
+                <p class="footer__text">Espero que hayas disfrutado mi website. Si deseas compartir tu feedback, no dudes en contactarme.</p>
+                <h2 class="footer__title">
+                    <a href='https://cafecito.app/rodrijuarez' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_5.png 1x, https://cdn.cafecito.app/imgs/buttons/button_5_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_5_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_5.png' alt='Invitame un café en cafecito.app' /></a>
+                </h2>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="index.html#home" class="footer__link">Home</a></li>
+                    <li><a href="index.html#about" class="footer__link">Sobre mi</a></li>
+                    <li><a href="index.html#skills" class="footer__link">Skills</a></li>
+                    <li><a href="index.html#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Contacto</a></li>
+                    <li><a href="index.html#articles" class="footer__link">Articulos</a></li>
+                </ul>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <a href="https://www.linkedin.com/in/rodrijuarez/" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/RodriJOk" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.instagram.com/preguntastech" class="about__social-icon"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
