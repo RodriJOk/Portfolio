@@ -532,7 +532,7 @@ img{
     /* ARTICULOS */
 
     .personal-articles{
-        margin: 10px 0px;
+        margin: 10px auto;
     }
     
     .personal-articles_single{
@@ -542,8 +542,12 @@ img{
         margin: 20px 0px;
     }
 
-    .personal-articles_single h2{
+    .personal-articles_single h3{
         text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 58%;
     }
 }
 
