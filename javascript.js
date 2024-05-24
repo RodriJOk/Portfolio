@@ -94,7 +94,7 @@ let typer = new TextTyper( document.getElementById('type-me') );
 const init = () => {
   typer
     .wait(1200)
-    .type("Me llamo Alan Rodrigo Juarez 👦🏻. ")
+    .type("Me llamo Rodrigo Juarez 👦🏻. ")
     
     .wait(500)
     .type("Un apasionado por la tecnologia, ")

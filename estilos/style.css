@@ -1,6 +1,6 @@
 @import "./section.css";
 @import "./npm.css";
-@import "./productividad.css";
+@import "./articulo.css";
 
 :root{
     /*===== Components size =====*/    
@@ -65,18 +65,15 @@ body{
     color: var(--text-color);
     line-height: 1.6;
 }
-
 h1,h2,p{
     margin:0;
     font-weight: var(--font-big);
 }
-
 ul{
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
 a{
     text-decoration: none;
     /* color: var(--text-color); */   
@@ -99,7 +96,6 @@ img{
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
 }
-
 .header{
     width: 100%;
     position: fixed;
@@ -108,34 +104,27 @@ img{
     z-index: var(--z-fixed);
     background-color: var(--first-color);
 }
-
 .header-nav{
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .logo{
     color: var(--white-color);
     font-weight: var(--font-big);
 }
-
 .nav__item{
     margin-bottom: var(--mb-4);
     color: var(--white-color);
 }
-
 .nav__link{
     position: relative;
     color: var(--white-color);
 }
-
 .nav__link:hover{
     color: var(--first-color)
 }
-
-
 .nav__toggle{
     color: var(--white-color);
     font-size: 1.5rem;
