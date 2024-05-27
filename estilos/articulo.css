@@ -1,3 +1,8 @@
+@font-face{
+    src: url('../fonts/ProductSans-Thin.ttf');
+    font-family: 'Google Sans Thin';
+    font-style: normal;
+}
 html{
     scroll-timeline: --page-scroll block;
 }
@@ -44,6 +49,7 @@ html{
     width: 80%;
     margin: 60px auto;
     max-width: 1024px;
+    font-family: 'Google Sans Thin', sans-serif;
 }
 .article-title{
     margin-bottom: 3rem;
