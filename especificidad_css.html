@@ -64,21 +64,77 @@
         <section class="article-section">
             <h2 class="article-title">CSS y una de sus claves: la especificidad</h2>
             <p class="paragraph">Sin ningún tipo de dudas, uno de los conceptos claves en CSS es su especificidad. Y es que, si no tienes en cuenta ese concepto, probablemente, te ocurran cosas en la interfaz que no sepan de donde salen, y peor aún, no sabrás porque motivo ocurre.</p>
-            <p class="paragraph">Es por eso que en este artículo quería desarrollar este importante concepto, especialmente si hace poco que estás aprendiendo más sobre CSS. En el caso de que ya tengas varios años en la industria, especialmente relacionada al Front-End, también estás invitado a quedarte a seguir leyendo este artículo, que puede servirte de repaso de algunos temas.</p>
+            <p class="paragraph">Es por eso que en este artículo quería desarrollar este importante concepto, especialmente util si hace poco que estás aprendiendo más sobre CSS. En el caso de que ya tengas varios años en la industria, especialmente relacionada al Front-End, también estás invitado a continuar con la lectura de este artículo, que puede servirte de repaso de algunos temas.</p>
             <h3 class="section-title">Especificidad en CSS.</h3>
             <p class="paragraph">Uno de los conceptos más importantes en CSS, es justamente la especificidad. Pero, ¿cómo podemos definir a la especificidad?</p>
             <p class="paragraph">Se conoce como especificidad al conjunto de reglas que toman los navegadores para determinar qué estilos tomará un determinado elemento, teniendo en cuenta que tipo de selector y lo específico que fue utilizado por los desarrolladores.</p>
             <p class="paragraph">Aquí podemos establecer una constante, y es que mientras más específico sea el selector que se ha usado, mayor será la importancia que tendrá para el navegador. Es por eso que para comprender la jerarquía de la especificidad de CSS, lo mejor sería dar un vistazo a los diferentes selectores:</p>
-            <p class="paragraph">Pero, ¿cómo se toma en cuenta el nivel de jerarquía?¿Qué factores hay que tener en cuenta?</p>
-            <p class="paragraph">Bueno, podemos decir que mientras más específico sea el selector, mayor importancia tendrá. Es por eso que los navegadores toman en cuenta que tipo de selector estas utilizado, y en base a eso, le asignan un valor. Es por eso que vamos a ver que valor tienen los selectores.</p>
             <ul>
                 <li>
                     <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Selector universal (*) y los combinadores (+, >, ~):</span> No tienen especificidad y obtienen el valor de 0. Este selector comúnmente se utiliza para poder aplicar alguna propiedad en cualquier elemento de la página. Generalmente lo vemos cuando se quiere aplicar la propiedad box-sizing:border-box, a todos los elementos.</p>
+                    <figure class="container-image">
+                        <img src="/imagenes/Articulos/Especificidad_CSS/Selector_universal_1.png" alt="" class="image" loading="lazy">
+                    </figure>
                 </li>
                 <li>
-                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Elementos y ::pseudoelementos:</span> El uso de etiquetas de HTML (p, main, div, entre otros), y su correspondiente vinculación desde CSS, tiene un valor de 1. En el caso de que usemos más un selector de elementos, los valores son acumulativos, por lo que se irán sumando al valor de especificidad del elemento</p>
+                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Elementos y ::pseudoelementos:</span> El uso de etiquetas de HTML (p, main, div, entre otros), y su correspondiente vinculación desde CSS, tiene un valor de 1. </p>
+                    <figure class="container-image">
+                        <img src="/imagenes/Articulos/Especificidad_CSS/Elementos_pseudoelementos_1.png" alt="" class="image" loading="lazy">
+                    </figure>
+                    <figure class="container-image">
+                        <img src="/imagenes/Articulos/Especificidad_CSS/Elementos_pseudoelementos_2.png" alt="" class="image" loading="lazy">
+                    </figure>
+                    <p class="paragraph">En el caso de que usemos más un selector de elementos, los valores son acumulativos, por lo que se irán sumando al valor de especificidad del elemento </p>
+                    <figure class="container-image">
+                        <img src="/imagenes/Articulos/Especificidad_CSS/Elementos_pseudoelementos_3.png" alt="" class="image" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Selectores de clase, atributos y pseudoclases:</span> Los selectores de clase tienen un valor de 10, y deben ser declarados con el atributo class, y deben ser vinculados por su nombre al definir los estilos CSS.</p>
+                    <figure class="container-image">
+                        <img src="/imagenes/Articulos/Especificidad_CSS/Elementos_clase.png" alt="" class="image" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Selectores de ID:</span> Estos selectores tienen una especificidad de 100, y deben ser declarados con el atributo id, y deben ser llamados por su nombre al declarar los estilos. Veamos un ejemplo:</p>
+                    <figure class="container-image">
+                        <img src="/imagenes/Articulos/Especificidad_CSS/Elementos_ID.png" alt="" class="image" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Estilos inline (en linea) - Atributo style:</span> Son las declaración de estilos que se hacen, en el momento en el que se define y se declaran los elementos Html. Estos estilos toman un valor de 1,0,0,0.</p>
+                    <figure class="container-image">
+                        <img src="/imagenes/Articulos/Especificidad_CSS/Elementos_inline.png" alt="" class="image" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Propiedad !important:</span> El uso de esta propiedad debe ser usado con precaución, ya que asigna un valor de 1,0,0,0,0. Muy probablemente al aplicar important al estilo en cuestión, lo veas aplicado. Si existen dos reglas que incluyen la cláusula !important y ambas tienen la misma especificidad, se aplicará la que esté definida más tarde en el documento o en la lista de estilos en línea.</p>
+                    <figure class="container-image">
+                        <img src="/imagenes/Articulos/Especificidad_CSS/Propiedad_important.png" alt="" class="image" loading="lazy">
+                    </figure>
                 </li>
             </ul>
+            <p class="paragraph">Asi que como vemos, dependiendo del uso que le demos a diferentes selectores, dependera en gran medida del selector que usemos. Es por eso que arme una tabla para ver la informacion que estuvimos analizando anteriormente, de una manera mas visual. </p>
+            <h3 class="section-title">Tabla de especificidad</h3>
+            <figure class="container-image">
+                <img src="/imagenes/Articulos/Especificidad_CSS/Tabla_especificidad.png" alt="" class="image" loading="lazy">
+            </figure>
+            <h3 class="paragraph">Uso de herramientas para la especificidad</h3>
+            <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Devtool:</span> Para poder tener una visibilidad más completa sobre la especificidad en CSS, contamos con herramientas muy interesantes en la DevTool (Herramientas de Desarrolladores). Y es que cuando seleccionamos un determinado elemento, en la solapa de Estilos, si ponemos el cursor sobre las etiquetas, nos dará el nivel de especificidad de la etiqueta en cuestión.
+            </p>
+            <figure class="container-image">
+                <img src="/imagenes/Articulos/Especificidad_CSS/Devtool.png" alt="" class="image" loading="lazy">
+            </figure>
+            <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">VSCode:</span> En visual studio code, relacionado con la funcionalidad de la DevTool, también tenemos una funcionalidad similar. Si con el cursor nos posicionamos en uno de los elementos de nuestra etiqueta en nuestro archivo CSS, también se nos mostrará la especificidad de nuestro elemento.
+            </p>
+            <figure class="container-image">
+                <img src="/imagenes/Articulos/Especificidad_CSS/VSCode.png" alt="" class="image" loading="lazy">
+            </figure>
+            <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Specificity Graph:</span> Esta es una <a target="_blank" href="https://jonassebastianohlsson.com/specificity-graph/">herramienta</a> que lo que nos permite es analizar cualquier codigo CSS y generar una grafica que muestra la especificidad en el eje vertical y la posicion de dicha especificidad en el codigo.
+            </p>
+            <h3 class="section-title">Conclusión</h3>
+            <p class="paragraph">Sin dudas, el tener en mente, las formas en las que trabaja CSS, te ayudará mucho al momento de trabajar con él, especialmente cuando defines estilos a determinados elementos y ves que no se efectúan esos cambios. CSS, es un lenguaje de estilos que puede ser complejo usarlo al principio, pero a medida que vayas tomándole la mano, sin dudas, se te va a hacer más fácil.</p>
+            <p class="paragraph">Muchas gracias por llegar hasta acá ! Saludos !</p>
         </section>
     </main>
 
