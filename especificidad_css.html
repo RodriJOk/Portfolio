@@ -92,25 +92,25 @@
                     </figure>
                 </li>
                 <li>
-                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Selectores de clase, atributos y pseudoclases: </span>Los selectores de clase tienen un valor de 10, y deben ser declarados con el atributo class, y deben ser vinculados por su nombre al definir los estilos CSS.</p>
+                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Selectores de clase, atributos y pseudoclases:</span> Los selectores de clase tienen un valor de 10, y deben ser declarados con el atributo class, y deben ser vinculados por su nombre al definir los estilos CSS.</p>
                     <figure class="container-image">
                         <img src="/imagenes/Articulos/Especificidad_CSS/Elementos_clase.png" alt="" class="image" loading="lazy">
                     </figure>
                 </li>
                 <li>
-                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Selectores de ID: </span>Estos selectores tienen una especificidad de 100, y deben ser declarados con el atributo id, y deben ser llamados por su nombre al declarar los estilos. Veamos un ejemplo:</p>
+                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Selectores de ID:</span> Estos selectores tienen una especificidad de 100, y deben ser declarados con el atributo id, y deben ser llamados por su nombre al declarar los estilos. Veamos un ejemplo:</p>
                     <figure class="container-image">
                         <img src="/imagenes/Articulos/Especificidad_CSS/Elementos_ID.png" alt="" class="image" loading="lazy">
                     </figure>
                 </li>
                 <li>
-                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Estilos inline (en linea) - Atributo style: </span>Son las declaración de estilos que se hacen, en el momento en el que se define y se declaran los elementos Html. Estos estilos toman un valor de 1,0,0,0.</p>
+                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Estilos inline (en linea) - Atributo style:</span> Son las declaración de estilos que se hacen, en el momento en el que se define y se declaran los elementos Html. Estos estilos toman un valor de 1,0,0,0.</p>
                     <figure class="container-image">
                         <img src="/imagenes/Articulos/Especificidad_CSS/Elementos_inline.png" alt="" class="image" loading="lazy">
                     </figure>
                 </li>
                 <li>
-                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Propiedad !important: </span>El uso de esta propiedad debe ser usado con precaución, ya que asigna un valor de 1,0,0,0,0. Muy probablemente al aplicar important al estilo en cuestión, lo veas aplicado. Si existen dos reglas que incluyen la cláusula !important y ambas tienen la misma especificidad, se aplicará la que esté definida más tarde en el documento o en la lista de estilos en línea.</p>
+                    <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Propiedad !important:</span> El uso de esta propiedad debe ser usado con precaución, ya que asigna un valor de 1,0,0,0,0. Muy probablemente al aplicar important al estilo en cuestión, lo veas aplicado. Si existen dos reglas que incluyen la cláusula !important y ambas tienen la misma especificidad, se aplicará la que esté definida más tarde en el documento o en la lista de estilos en línea.</p>
                     <figure class="container-image">
                         <img src="/imagenes/Articulos/Especificidad_CSS/Propiedad_important.png" alt="" class="image" loading="lazy">
                     </figure>
@@ -122,17 +122,17 @@
                 <img src="/imagenes/Articulos/Especificidad_CSS/Tabla_especificidad.png" alt="" class="image" loading="lazy">
             </figure>
             <h3 class="paragraph">Uso de herramientas para la especificidad</h3>
-            <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Devtool: </span>Para poder tener una visibilidad más completa sobre la especificidad en CSS, contamos con herramientas muy interesantes en la DevTool (Herramientas de Desarrolladores). Y es que cuando seleccionamos un determinado elemento, en la solapa de Estilos, si ponemos el cursor sobre las etiquetas, nos dará el nivel de especificidad de la etiqueta en cuestión.
+            <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Devtool:</span> Para poder tener una visibilidad más completa sobre la especificidad en CSS, contamos con herramientas muy interesantes en la DevTool (Herramientas de Desarrolladores). Y es que cuando seleccionamos un determinado elemento, en la solapa de Estilos, si ponemos el cursor sobre las etiquetas, nos dará el nivel de especificidad de la etiqueta en cuestión.
             </p>
             <figure class="container-image">
                 <img src="/imagenes/Articulos/Especificidad_CSS/Devtool.png" alt="" class="image" loading="lazy">
             </figure>
-            <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">VSCode: </span>En visual studio code, relacionado con la funcionalidad de la DevTool, también tenemos una funcionalidad similar. Si con el cursor nos posicionamos en uno de los elementos de nuestra etiqueta en nuestro archivo CSS, también se nos mostrará la especificidad de nuestro elemento.
+            <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">VSCode:</span> En visual studio code, relacionado con la funcionalidad de la DevTool, también tenemos una funcionalidad similar. Si con el cursor nos posicionamos en uno de los elementos de nuestra etiqueta en nuestro archivo CSS, también se nos mostrará la especificidad de nuestro elemento.
             </p>
             <figure class="container-image">
                 <img src="/imagenes/Articulos/Especificidad_CSS/VSCode.png" alt="" class="image" loading="lazy">
             </figure>
-            <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Specificity Graph: </span>Esta es una <a target="_blank" href="https://jonassebastianohlsson.com/specificity-graph/">herramienta</a> que lo que nos permite es analizar cualquier codigo CSS y generar una grafica que muestra la especificidad en el eje vertical y la posicion de dicha especificidad en el codigo.
+            <p class="paragraph"><span style="font-weight: 900; text-decoration: underline;">Specificity Graph:</span> Esta es una <a target="_blank" href="https://jonassebastianohlsson.com/specificity-graph/">herramienta</a> que lo que nos permite es analizar cualquier codigo CSS y generar una grafica que muestra la especificidad en el eje vertical y la posicion de dicha especificidad en el codigo.
             </p>
             <h3 class="section-title">Conclusión</h3>
             <p class="paragraph">Sin dudas, el tener en mente, las formas en las que trabaja CSS, te ayudará mucho al momento de trabajar con él, especialmente cuando defines estilos a determinados elementos y ves que no se efectúan esos cambios. CSS, es un lenguaje de estilos que puede ser complejo usarlo al principio, pero a medida que vayas tomándole la mano, sin dudas, se te va a hacer más fácil.</p>
