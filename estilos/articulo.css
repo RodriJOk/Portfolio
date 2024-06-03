@@ -94,7 +94,7 @@ html{
     }
     .article-section{
         width: 90%;
-        margin: 70px auto;
+        margin: 70px 1rem;
     }
     .section-title{
         font-size: 1.8rem;
