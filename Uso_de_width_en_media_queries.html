@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+        <link href="../estilos/style.css" rel="stylesheet">
+        <link href="./estilos/articulo.css" rel="stylesheet">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFELBG80ZH"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-WFELBG80ZH');
+        </script>
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/code-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/code-32x32.png">
+        <title>Rodrigo Juarez 🧑🏻‍💻</title>
+    </head>
+<body>
+    <header class="header">
+        <nav class="header-nav bd-grid">
+            <div class="header-nav__logo">
+                <a href="index.html" class="logo">Rodrigo Juarez</a>
+            </div>
+
+            <div class="header-nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">Sobre mi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">Contacto</a>
+                    </li>
+                    <!-- <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link">Blog</a>
+                    </li> -->
+                    <li class="nav__item">
+                        <a href="index.html#blog" class="nav__link active">Articulos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <div id="progress-bar"></div>
+    <main class="l-main">
+        <section class="article-section">
+            <!-- Etiquetas para la seccion de articulos -->
+            <!-- <h2 class="article-title"></h2> -->
+            <!-- <p class="paragraph"></p> -->
+            <!-- <figure class="container-image">
+                <img src="" alt="" class="image" loading="lazy">
+            </figure> -->
+            <!-- <h3 class="section-title"></h3> -->
+            <h2 class="article-title">Uso de width en media queries</h2>
+            <p class="paragraph">¿Sabías que tenemos nueva sintaxis en las medias queries? ¡Si! Y te va a facilitar mucho a la hora de declarar los rangos de tus medias en tu código CSS.</p>
+            <p class="paragraph">Recordemos que las medias queries nos facilitan mucho para mantener nuestras páginas de manera responsive. Esto implica que los elementos de una página web se van adaptando de una manera acorde a los diferentes tamaños de los dispositivos que el usuario utilice para acceder al contenido. Es por eso que es común ver en tus archivos de estilos, la utilización de las propiedades max-width y min-width, pero te tengo una noticia. También tenemos otra equivalencia para poder hacerlo y es la propiedad de width.</p>
+            <p class="paragraph">Generalmente, nosotros usamos las medias queries de esta manera.</p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Media_query/media_query_simply.png" alt="Uso de Media query con las propiedades max-width y min-width" class="image" loading="lazy">
+            </figure>
+            <p class="paragraph">Pero, lo interesante es que podrás usarlo de esta manera. De una forma mucho más reducida, pero eficiente y más sencillo de leer.</p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Media_query/media_query_simply_new.png" alt="Uso de width en media query sin las propiedades max-width y min-width" class="image" loading="lazy">
+            </figure>
+            <p class="paragraph">Por supuesto que también podemos utilizar dos valores para definir los estilos entre dos medidas en específico.</p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Media_query/media_query_complex.png" alt="Uso de width en media query con dos valores" class="image" loading="lazy">
+            </figure>
+            <p class="paragraph">Y asi, podemos expresar lo mismo con la nueva sintaxis</p>
+            <figure class="container-image">
+                <img src="./imagenes/Articulos/Media_query/media_query_complex_new.png" alt="Uso de width en media query con dos valores sin las propiedades max-width y min-width" class="image" loading="lazy">
+            </figure>
+
+            <p class="paragraph">Así que como vemos, el conocer esta nueva alternativa nos permite algunas ventajas que las puedes tener en cuenta. Es más eficiente, ya que reducimos complejidad de nuestro código y para quienes van a modificar o leer tu código CSS, será mucho más sencillo el poder hacerlo ya que el mismo será más legible.
+            </p>
+        
+            <p class="paragraph">Por otro lado, esta nueva sintaxis cuenta con soporte en la mayoría de los navegadores al dia de hoy, pero siempre es una buena práctica que consultes la <a style="text-decoration: none; color: #000;" href="https://caniuse.com/?search=media" target="_blank">compatibilidad</a>, antes de poner código en producción.</p>
+            <p class="paragraph">Como siempre menciono, el conocer nuevas sintaxis (como es el caso), o el conocer nuevas herramientas amplían nuestras perspectivas y eso nos permite fortalecer nuestros argumentos al tomar decisiones.</p>
+            <p class="paragraph">Muchas gracias </p>
+            <p class="paragraph">Saludos 👨🏻‍💻👩🏻‍💻</p>    
+        </section>
+    </main>
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">RODRIGO JUAREZ</h2>
+                <p class="footer__text">Espero que hayas disfrutado mi website. Si deseas compartir tu feedback, no dudes en contactarme.</p>
+                <h2 class="footer__title">
+                    <a href='https://cafecito.app/rodrijuarez' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_5.png 1x, https://cdn.cafecito.app/imgs/buttons/button_5_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_5_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_5.png' alt='Invitame un café en cafecito.app' /></a>
+                </h2>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="index.html#home" class="footer__link">Home</a></li>
+                    <li><a href="index.html#about" class="footer__link">Sobre mi</a></li>
+                    <li><a href="index.html#skills" class="footer__link">Skills</a></li>
+                    <li><a href="index.html#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Contacto</a></li>
+                    <li><a href="index.html#articles" class="footer__link">Articulos</a></li>
+                </ul>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <a href="https://www.linkedin.com/in/rodrijuarez/" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/RodriJOk" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.instagram.com/preguntastech" class="about__social-icon"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../javascript.js"></script>
+</body>
+</html>
+
